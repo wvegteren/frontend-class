@@ -1,11 +1,11 @@
 # Welcome to the frontend class 🚀
 
 During the program we will cover:
-1. HTML
+1. [HTML](./slides/FEC-1-HTML.pptx)
     - Syntax
     - Security    
     - Accessibility
-1. CSS
+1. [CSS](./slides/FEC-2-CSS.pptx)
 1. SASS, BEM style, responsive design
 1. TypeScript
 1. Angular
