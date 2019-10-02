@@ -6,7 +6,7 @@ During the program we will cover:
     - Security    
     - Accessibility
 1. [CSS](./slides/FEC-2-CSS.pptx)
-1. SASS, BEM style, responsive design
+1. [CSS (continued), SASS, BEM style, responsive design](./slides/FEC-3-CSS-SASS-BEM-Responsive.pptx)
 1. TypeScript
 1. Angular
 1. NativeScript
