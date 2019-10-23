@@ -1,0 +1,17 @@
+[
+  {
+    "accountNumber": "11111",
+    "registrationName": "First Account",
+    "balance": 111.11
+  },
+  {
+    "accountNumber": "22222",
+    "registrationName": "Second Account",
+    "balance": 222.22
+  },
+  {
+    "accountNumber": "33333",
+    "registrationName": "Third Account",
+    "balance": 333.33
+  }
+]

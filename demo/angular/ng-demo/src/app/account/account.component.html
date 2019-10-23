@@ -1,0 +1,9 @@
+
+<h4>{{ account.accountNumber }}</h4>
+<p>{{ account.registrationName }}</p>
+<p>{{ account.balance | currency:'EUR' }}</p>
+
+<br><br>
+
+<input type="text" [(ngModel)]="account.registrationName">
+<button (click)="onNameChange()" [disabled]="!nameChangeAllowed">Change Name</button>

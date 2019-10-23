@@ -1,0 +1,9 @@
+<p>Names have been changed {{ nameChangeCount }} times.</p>
+
+<ul>
+  <li *ngFor="let account of accounts" (click)="onSelectAccount(account)">
+    {{ account.accountNumber }} - {{ account.registrationName }}
+  </li>
+</ul>
+
+<app-account *ngIf="selectedAccount" [account]="selectedAccount" (nameChanged)="onNameChange($event)"></app-account>
