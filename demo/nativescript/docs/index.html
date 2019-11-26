@@ -1,0 +1,2504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>NativeScript Workshop</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="container">
+  <div id="header">
+    <a href="#" class="menu header-btn" id="toggle-toc"></a>
+    <h1>NativeScript Workshop</h1>
+    <a href="https://github.com/wvegteren/frontend-class/demo/nativescript/index.html" class="github header-btn"></a>
+  </div>
+
+  <div id="content-container">
+    <div id="toc">
+      <div class="toc-heading">Table of Contents</div>
+      <div id="toc-padding"></div>
+    </div>
+    <div id="book">
+
+      <div class="chapter">
+
+        <h2 id="getting-started-with-the-nativescript-playground">Getting Started with the NativeScript Playground</h2>
+
+        <p>Now you’ll learn how to use the NativeScript Playground to get started quickly, build your first app, and run
+          the app on your phone.</p>
+
+        <h3 id="about-the-nativescript-playground">About the NativeScript Playground</h3>
+
+        <p>The <a href="https://play.nativescript.org">NativeScript Playground</a> is a browser-based environment for
+          developing simple NativeScript apps.
+          It’s a great place to get started learning NativeScript, as you can develop apps without needing to install
+          the various
+          SDKs and tools needed for native iOS and Android development. All you need is your browser, and an Android or
+          iOS mobile
+          device connected to the internet to get started.</p>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Explore the Playground and Run an App
+        </h4>
+
+        <p>In this exercise, you’ll explore the NativeScript Playground and learn how to run an app built in the
+          Playground on your mobile device.</p>
+
+        <h4 id="prerequisites">Prerequisites</h4>
+
+        <p>Before we get started, you’ll need to install 2 apps on your mobile device:</p>
+
+        <ul>
+          <li>NativeScript Playground: <a
+              href="https://itunes.apple.com/us/app/nativescript-playground/id1263543946?mt=8">iOS</a>, <a
+              href="https://play.google.com/store/apps/details?id=org.nativescript.play&amp;hl=en">Android</a></li>
+          <li>NativeScript Preview: <a
+              href="https://itunes.apple.com/us/app/nativescript-preview/id1264484702?mt=8">iOS</a>, <a
+              href="https://play.google.com/store/apps/details?id=org.nativescript.preview&amp;hl=en">Android</a></li>
+        </ul>
+
+        <p>In your respective App Store (Google Play or Apple App Store), locate both apps and install them on your
+          mobile device.
+          If you’re having trouble finding the app, use the links above.</p>
+
+        <h4 id="explore-the-nativescript-playground">Explore the NativeScript Playground</h4>
+
+        <p>Next, navigate to the <a href="https://play.nativescript.org">NativeScript Playground</a> in your browser.
+        </p>
+
+        <p><img src="images/chapter0/playground-overlay.png" class="img-large"/></p>
+
+        <p>Click “Angular” to begin.</p>
+
+        <p><img src="images/chapter0/play-now.png" class="img-small"/></p>
+
+        <p>After clicking “Angular” a QR code will appear, and you’ll be notified that your Playground is ready:
+          Open the NativeScript Playground app on your mobile device, and select the “Scan QR code” action.</p>
+
+        <p><img src="images/chapter0/scan-qr.png" class="img-small"/></p>
+
+        <p>Using the QR code scanner in the NativeScript Playground app, scan the QR code displayed on the NativeScript
+          Playground
+          website.</p>
+
+        <p>After scanning the QR code, the NativeScript Playground app will open the NativeScript Preview app and
+          dynamically load
+          the code from the Playground Website and launch a native mobile app on your mobile device!</p>
+
+        <p>When all of this happens, you should see this on your mobile device:</p>
+
+        <p><img src="images/chapter0/preview-app.png" class="img-small"/></p>
+
+        <p>…and you should also see the following on the Playground website:</p>
+
+        <p><img src="images/chapter0/playground-default.png" class="img-large"/></p>
+
+        <p>Congratulations! You just used the Playground to write your first mobile app with Angular. Then, you ran the
+          app on your
+          phone. That was fast - and you didn’t need to install anything on your computer!</p>
+
+        <p>OK, we know you didn’t have to do much of anything to write this app, but we promise you’ll learn more and
+          build something
+          more advanced during the workshop.</p>
+
+        <div class="exercise-end"></div>
+
+        <p>Before we move on, let’s take a minute to understand what happened and explore the NativeScript Playground
+          UI.</p>
+
+        <h3 id="how-the-nativescript-playground-works">How the NativeScript Playground Works</h3>
+
+        <p>The NativeScript Playground is a web-based IDE. You write your Angular code in the browser, then save it.
+          When you scan
+          the QR code, the NativeScript Playground app coordinates with the NativeScript Preview app and reaches out to
+          the
+          Playground website. The code is pulled down, loaded into the NativeScript runtime in the Preview app, and
+          renders native
+          iOS/Android UI on your mobile device.</p>
+
+        <h3 id="exploring-the-playground-ui">Exploring the Playground UI</h3>
+
+        <p>Now that you’ve learned how the Playground works, let’s explore the UI.</p>
+
+        <p>As you’ll notice, the Playground UI is similar to a basic IDE, like Visual Studio Code, Visual Studio,
+          Eclipse, or Web
+          Storm.</p>
+
+        <p>On the left is a file explorer, where you can add or update files and folders to your mobile app:</p>
+
+        <p>The large central area is a file editor with Intellisense:</p>
+
+        <p>The bottom central area shows you which mobile devices are connected to the Playground and device/error logs
+          for debugging
+          purposes.</p>
+
+        <blockquote>
+          <p><strong>Connected Devices</strong></p>
+
+          <p>Hold on…the Playground shows you connected devices. Yes, that’s right. When your mobile device connects to
+            the Playground,
+            it registers itself with the website. You can see a variety of information about a connected device.</p>
+        </blockquote>
+
+        <p>Pretty cool, right? Well, there’s something even cooler about the Playground: <em>LiveSync</em>.</p>
+
+        <blockquote>
+          <p><strong>LiveSync</strong></p>
+
+          <p>LiveSync is a technology that syncs changes made in the Playground down to your mobile device in real time.
+            This means that you can quickly make changes to your app in the Playground and the changes will be instantly
+            pushed to
+            connected devices. If you’ve ever done mobile development before, you’ll understand how useful this is -
+            getting feedback
+            from your code running on real mobile devices usually takes time, but with LiveSync, it’s instantaneous.</p>
+        </blockquote>
+
+        <h3 id="livesync-in-action">LiveSync in Action</h3>
+
+        <p>Now that you’ve learned about LiveSync, let’s see it in action.</p>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Using LiveSync
+        </h4>
+
+        <p>In this exercise, you’ll learn how to use LiveSync by interacting wth the Playground website and seeing the
+          app on your
+          mobile device update automatically.</p>
+
+        <h4 id="getting-started">Getting Started</h4>
+
+        <p>Before we get started with this exercise, be sure to have your Playground app loaded in the NativeScript
+          Preview app.</p>
+
+        <p>If your app isn’t running, press the “QR code” button in the Playground website, and re-scan the code on your
+          mobile device:</p>
+
+        <p><img src="images/chapter0/qr-code.png" class="img-small"/></p>
+
+        <h4 id="understanding-markup">Understanding Markup</h4>
+
+        <p>Now that your app is running on your mobile device, let’s make a change.</p>
+
+        <p>Start by finding the home.component.html file in the <em>Explorer</em> section on the left, then open it for
+          editing by clicking on it.</p>
+
+        <p>You’ll notice some markup in the home.component.html file. It’s not important for you to understand the
+          markup right now,
+          but you should know that any markup you place in this file will affect the native UI generated on the home
+          page of your app.</p>
+
+        <p>Even though you may not understand all of the markup, you can probably guess at the meaning on most tags.
+          NativeScript UI markup is can be easy to understand, because it’s similar to HTML.</p>
+
+        <p>For example, look at the markup that displays a label on the screen that contains the text “Play with
+          NativeScript!”:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;Label</span>
+    <span class="na">textWrap=</span><span class="s">"true"</span> 
+    <span class="na">text=</span><span class="s">"Play with NativeScript!"</span> 
+    <span class="na">class=</span><span class="s">"h2 description-label"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/Label&gt;</span>
+</code></pre>
+        </div>
+
+        <h4 id="changing-markup-with-livesync">Changing markup with LiveSync</h4>
+
+        <p>Let’s change the text in the home.component.html file.</p>
+
+        <p>Change the text that reads “Play with NativeScript!” to somethings else. Feel free to use the code snippet
+          below, or your own text.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;Label</span>
+    <span class="na">textWrap=</span><span class="s">"true"</span> 
+    <span class="na">text=</span><span class="s">"Using LiveSync is easy and convenient!"</span> 
+    <span class="na">class=</span><span class="s">"h2 description-label"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/Label&gt;</span>
+</code></pre>
+        </div>
+
+        <p>After making this change, press the “Save” button:</p>
+
+        <p><img src="images/chapter0/save-button.png" class="img-small"/></p>
+
+        <p>Then, look back at your mobile device, and watch the UI of the app change.</p>
+
+        <p>Easy and cool!</p>
+
+        <p>We’ll continue to rely on LiveSync throughout this workshop to get instant feedback in our apps.</p>
+
+        <div class="exercise-end"></div>
+
+        <p>Take some time to play around a bit more to get a feel with the various components that NativeScript offers
+          you.
+          You can drag and drop the components from the components palette to the editor.
+          Take a little time to understand the different layouts. They are the key elements for every UI.</p>
+
+
+      </div>
+
+      <div class="chapter">
+
+        <h2 id="lesson-1---ui">Lesson 1 - UI</h2>
+
+        <p>In this lesson we are going to familiarize ourselves with some of the most commonly used UI components in
+          NativeScript.</p>
+
+        <p>For this exercise we will use the contents of the <code class="highlighter-rouge">app/profile</code> folder,
+          which already contains some pieces of the app
+          that we need.</p>
+
+        <p>If you are using <code class="highlighter-rouge">Playground</code> then you should head to:
+          <a href="https://play.nativescript.org/?template=play-ng&amp;id=HIKegT&amp;v=2">https://play.nativescript.org/?template=play-ng&amp;id=HIKegT&amp;v=2</a>
+          Please <code class="highlighter-rouge">Fork</code> the Playground app to create your ‘own’ Playground
+          environment.</p>
+
+        <p>If you open <code class="highlighter-rouge">profile.component.ts</code> you will notice that our component
+          has an attribute <code class="highlighter-rouge">profile</code> with some populated
+          values. In the next few steps we will create a screen that will allow us to display and edit these values.</p>
+
+        <p>Here are some examples of UI components:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;Label</span> <span class="na">text=</span><span
+            class="s">"name"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+<span class="nt">&lt;TextField</span> <span class="na">hint=</span><span class="s">"your name here"</span> <span
+              class="na">text=</span><span class="s">"Jack"</span><span class="nt">&gt;&lt;/TextField&gt;</span>
+<span class="nt">&lt;Switch</span> <span class="na">checked=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/Switch&gt;</span>
+<span class="nt">&lt;DatePicker</span> <span class="err">[</span><span class="na">day</span><span class="err">]="</span><span
+              class="na">2</span><span class="err">"</span> <span class="err">[</span><span class="na">month</span><span
+              class="err">]="</span><span class="na">2</span><span class="err">"</span> <span class="err">[</span><span
+              class="na">year</span><span class="err">]="</span><span class="na">2002</span><span
+              class="err">"</span><span class="nt">&gt;&lt;/DatePicker&gt;</span>
+<span class="nt">&lt;Slider</span> <span class="err">[</span><span class="na">minValue</span><span
+              class="err">]="</span><span class="na">0</span><span class="err">"</span> <span class="err">[</span><span
+              class="na">maxValue</span><span class="err">]="</span><span class="na">10</span><span class="err">"</span> <span
+              class="err">[</span><span class="na">value</span><span class="err">]="</span><span
+              class="na">3</span><span class="err">"</span><span class="nt">&gt;&lt;/Slider&gt;</span>
+<span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Do Something"</span> <span class="err">(</span><span
+              class="na">tap</span><span class="err">)="</span><span class="na">clear</span><span class="err">()"</span><span
+              class="nt">&gt;&lt;/Button&gt;</span>
+</code></pre>
+        </div>
+
+        <h3 id="attribute-binding">Attribute binding</h3>
+
+        <p>The above example uses hardcoded values, but you can also use one way binding (with <code
+            class="highlighter-rouge">[]</code> around the attribute you want
+          to bind to) to display the values in the profile.</p>
+
+        <p>For example:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;Label</span> <span class="err">[</span><span
+            class="na">text</span><span class="err">]="</span><span class="na">profile</span><span
+            class="err">.</span><span class="na">name</span><span class="err">"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+<span class="nt">&lt;TextField</span> <span class="err">[</span><span class="na">text</span><span class="err">]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">name</span><span class="err">"</span> <span
+              class="na">hint=</span><span class="s">"name"</span><span class="nt">&gt;&lt;/TextField&gt;</span>
+</code></pre>
+        </div>
+
+        <h3 id="events">Events</h3>
+
+        <p>UI Components include events to handle common user interactions. A component can handle events such as: <code
+            class="highlighter-rouge">tap</code>,
+          <code class="highlighter-rouge">doubleTap</code>, <code class="highlighter-rouge">pinch</code>, <code
+              class="highlighter-rouge">pan</code>, <code class="highlighter-rouge">swipe</code>, <code
+              class="highlighter-rouge">rotation</code>, <code class="highlighter-rouge">longPress</code>, <code
+              class="highlighter-rouge">touch</code>. To leverage them, use the <code class="highlighter-rouge">(eventName)</code>
+          notation.</p>
+
+        <p>For example:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;StackLayout</span> <span
+            class="err">(</span><span class="na">longPress</span><span class="err">)="</span><span
+            class="na">clearForm</span><span class="err">()"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Action:"</span> <span
+              class="err">(</span><span class="na">swipe</span><span class="err">)="</span><span class="na">printDirection</span><span
+              class="err">($</span><span class="na">event</span><span class="err">)"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+  <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Do Something"</span> <span
+              class="err">(</span><span class="na">tap</span><span class="err">)="</span><span
+              class="na">doSomething</span><span class="err">()"</span><span class="nt">&gt;&lt;/Button&gt;</span>
+<span class="nt">&lt;/StackLayout&gt;</span>
+</code></pre>
+        </div>
+
+        <h3 id="exercise-use-ui-components">Exercise: Use UI components</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Use Label, TextField, Switch, DatePicker, Slider, Button
+        </h4>
+
+        <p>Recreate the below UI and bind the input components to the profile attributes.
+          Additionally, make sure that the two buttons call <code class="highlighter-rouge">save()</code> and <code
+              class="highlighter-rouge">clear()</code> respectively.</p>
+
+        <p><b>HINT</b> To make a TextField password friendly use <code class="highlighter-rouge">secure="true"</code>.
+        </p>
+
+        <p><img src="images/chapter1/ui-default.png?raw=true" alt="Recreate UI"/></p>
+
+        <p>Edit <code class="highlighter-rouge">profile.component.html</code> and have fun.</p>
+
+        <p>If you are working with a small screen, you may need to add <code class="highlighter-rouge">&lt;ScrollView&gt;</code>
+          inside the <code class="highlighter-rouge">&lt;StackLayout&gt;</code> to allow the user to scroll in the
+          screen. Like this:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>&lt;StackLayout&gt;
+ &lt;ScrollView&gt;
+   &lt;StackLayout&gt;
+     ...
+   &lt;StackLayout&gt;
+  &lt;/ScrollView&gt;
+&lt;/StackLayout&gt;
+</code></pre>
+        </div>
+
+        <blockquote>
+          <p><strong>NOTE</strong>: Your goal at this point is just to get the <em>initial</em> values of the <code
+              class="highlighter-rouge">profile</code> property to show up. If you
+            change the values of the form fields and you don’t see those changes when you hit Save don’t worry; we’ll
+            tackle that
+            in the next section.</p>
+        </blockquote>
+
+        <div class="solution-start"></div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;ActionBar</span> <span
+            class="na">title=</span><span class="s">"Profile"</span> <span class="na">class=</span><span class="s">"action-bar"</span><span
+            class="nt">&gt;</span>
+<span class="nt">&lt;/ActionBar&gt;</span>
+
+<span class="nt">&lt;StackLayout&gt;</span>
+  <span class="nt">&lt;ScrollView&gt;</span>
+    <span class="nt">&lt;StackLayout&gt;</span>
+      <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Name:"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;TextField</span>
+        <span class="err">[</span><span class="na">text</span><span class="err">]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">name</span><span class="err">"</span>
+        <span class="na">hint=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/TextField&gt;</span>
+   
+      <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Password:"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;TextField</span>
+        <span class="err">[</span><span class="na">text</span><span class="err">]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">password</span><span
+              class="err">"</span>
+        <span class="na">hint=</span><span class="s">"password"</span>
+        <span class="na">secure=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/TextField&gt;</span>
+   
+      <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Angular Pro:"</span><span
+              class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;Switch</span>
+        <span class="err">[</span><span class="na">checked</span><span class="err">]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">angularPro</span><span
+              class="err">"</span>
+        <span class="na">class=</span><span class="s">"switch"</span>
+        <span class="na">horizontalAlignment=</span><span class="s">"left"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/Switch&gt;</span>
+   
+      <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Date of Birth:"</span><span
+              class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;DatePicker</span> 
+        <span class="err">[</span><span class="na">day</span><span class="err">]="</span><span class="na">profile</span><span
+              class="err">.</span><span class="na">dob</span><span class="err">.</span><span
+              class="na">getDate</span><span class="err">()"</span>
+        <span class="err">[</span><span class="na">month</span><span class="err">]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">dob</span><span
+              class="err">.</span><span class="na">getMonth</span><span class="err">()+</span><span
+              class="na">1</span><span class="err">"</span>
+        <span class="err">[</span><span class="na">year</span><span class="err">]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">dob</span><span
+              class="err">.</span><span class="na">getYear</span><span class="err">()</span> <span class="err">+</span> <span
+              class="na">1900</span><span class="err">"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/DatePicker&gt;</span>
+      
+      <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Coding power:"</span><span
+              class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;Slider</span>
+        <span class="err">[</span><span class="na">value</span><span class="err">]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">codingPower</span><span
+              class="err">"</span>
+        <span class="err">[</span><span class="na">minValue</span><span class="err">]="</span><span
+              class="na">0</span><span class="err">"</span>
+        <span class="err">[</span><span class="na">maxValue</span><span class="err">]="</span><span class="na">10</span><span
+              class="err">"</span>
+        <span class="na">class=</span><span class="s">"slider"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/Slider&gt;</span>
+   
+      <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Save"</span> <span
+              class="err">(</span><span class="na">tap</span><span class="err">)="</span><span
+              class="na">save</span><span class="err">()"</span><span class="nt">&gt;&lt;/Button&gt;</span>
+      <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Clear"</span> <span
+              class="err">(</span><span class="na">tap</span><span class="err">)="</span><span
+              class="na">clear</span><span class="err">()"</span><span class="nt">&gt;&lt;/Button&gt;</span>
+    <span class="nt">&lt;/StackLayout&gt;</span>
+  <span class="nt">&lt;/ScrollView&gt;</span>
+<span class="nt">&lt;/StackLayout&gt;</span>
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <h3 id="two-way-binding">Two-way binding</h3>
+
+        <!--#### Two way binding with [(ngModel)]=”name” -> including the required changes to app.module.ts-->
+        <p>One-way binding is not particularly useful for input forms. This is where <code class="highlighter-rouge">[(ngModel)]</code>
+          comes in handy.</p>
+
+        <p>Each of the input components you used a moment ago allows you to use <code class="highlighter-rouge">[(ngModel)]</code>
+          to configure two-way binding:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;TextField</span> <span
+            class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+            class="na">email</span><span class="err">"</span> <span class="na">hint=</span><span class="s">"your name here"</span><span
+            class="nt">&gt;&lt;/TextField&gt;</span>
+<span class="nt">&lt;Switch</span> <span class="err">[(</span><span class="na">ngModel</span><span
+              class="err">)]="</span><span class="na">optIn</span><span class="err">"</span><span class="nt">&gt;&lt;/Switch&gt;</span>
+<span class="nt">&lt;DatePicker</span> <span class="err">[(</span><span class="na">ngModel</span><span
+              class="err">)]="</span><span class="na">dob</span><span class="err">"</span><span class="nt">&gt;&lt;/DatePicker&gt;</span>
+<span class="nt">&lt;Slider</span> <span class="err">[(</span><span class="na">ngModel</span><span
+              class="err">)]="</span><span class="na">size</span><span class="err">"</span> <span
+              class="err">[</span><span class="na">minValue</span><span class="err">]="</span><span
+              class="na">0</span><span class="err">"</span> <span class="err">[</span><span
+              class="na">maxValue</span><span class="err">]="</span><span class="na">10</span><span class="err">"</span><span
+              class="nt">&gt;&lt;/Slider&gt;</span>
+</code></pre>
+        </div>
+
+        <h3 id="exercise-two-way-binding">Exercise: Two way binding</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Two-way binding
+        </h4>
+
+        <p>Update all input components to use two-way binding.
+          Test it by clicking the Clear and Save buttons and see what happens.</p>
+
+        <blockquote>
+          <p><strong>NOTE</strong>: To keep an eye on the slider value, print it in the label above it:
+            <code class="highlighter-rouge">
+              &lt;Label [text]="'Coding power:' + profile.codingPower"&gt;&lt;/Label&gt;
+            </code></p>
+        </blockquote>
+
+        <div class="solution-start"></div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;ActionBar</span> <span
+            class="na">title=</span><span class="s">"Profile"</span> <span class="na">class=</span><span class="s">"action-bar"</span><span
+            class="nt">&gt;</span>
+<span class="nt">&lt;/ActionBar&gt;</span>
+<span class="nt">&lt;StackLayout&gt;</span>
+  <span class="nt">&lt;ScrollView&gt;</span>
+    <span class="nt">&lt;StackLayout&gt;</span>
+      <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Name:"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;TextField</span>
+        <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">name</span><span class="err">"</span>
+        <span class="na">hint=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/TextField&gt;</span>
+   
+      <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Password:"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;TextField</span>
+        <span class="err">[</span><span class="na">text</span><span class="err">]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">password</span><span
+              class="err">"</span>
+        <span class="na">hint=</span><span class="s">"password"</span>
+        <span class="na">secure=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/TextField&gt;</span>
+   
+      <span class="nt">&lt;Label</span> <span class="err">[</span><span class="na">text</span><span
+              class="err">]="'</span><span class="na">Angular</span> <span class="na">Pro:</span> <span
+              class="err">'</span> <span class="err">+</span> <span class="err">((</span><span class="na">profile</span><span
+              class="err">.</span><span class="na">angularPro</span><span class="err">)</span> <span
+              class="err">?</span> <span class="err">'</span><span class="na">Yes</span><span class="err">'</span><span
+              class="na">:</span> <span class="err">'</span><span class="na">No</span><span class="err">')"</span><span
+              class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;Switch</span>
+        <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">angularPro</span><span
+              class="err">"</span>
+        <span class="na">class=</span><span class="s">"switch"</span>
+        <span class="na">horizontalAlignment=</span><span class="s">"left"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/Switch&gt;</span>
+   
+      <span class="nt">&lt;Label</span> <span class="err">[</span><span class="na">text</span><span
+              class="err">]="'</span><span class="na">Date</span> <span class="na">of</span> <span
+              class="na">Birth:</span> <span class="err">'</span> <span class="err">+</span> <span
+              class="na">profile</span><span class="err">.</span><span class="na">dob</span><span
+              class="err">.</span><span class="na">toLocaleDateString</span><span class="err">()"</span><span
+              class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;DatePicker</span>
+        <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">dob</span><span
+              class="err">"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/DatePicker&gt;</span>
+      
+      <span class="nt">&lt;Label</span> <span class="err">[</span><span class="na">text</span><span
+              class="err">]="'</span><span class="na">Coding</span> <span class="na">power:</span><span
+              class="err">'</span> <span class="err">+</span> <span class="na">profile</span><span
+              class="err">.</span><span class="na">codingPower</span><span class="err">"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;Slider</span>
+        <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">codingPower</span><span
+              class="err">"</span>
+        <span class="err">[</span><span class="na">minValue</span><span class="err">]="</span><span
+              class="na">0</span><span class="err">"</span>
+        <span class="err">[</span><span class="na">maxValue</span><span class="err">]="</span><span class="na">10</span><span
+              class="err">"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/Slider&gt;</span>
+      
+      <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Save"</span> <span
+              class="err">(</span><span class="na">tap</span><span class="err">)="</span><span
+              class="na">save</span><span class="err">()"</span><span class="nt">&gt;&lt;/Button&gt;</span>
+      <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Clear"</span> <span
+              class="err">(</span><span class="na">tap</span><span class="err">)="</span><span
+              class="na">clear</span><span class="err">()"</span><span class="nt">&gt;&lt;/Button&gt;</span>
+    <span class="nt">&lt;/StackLayout&gt;</span>
+  <span class="nt">&lt;/ScrollView&gt;</span>
+<span class="nt">&lt;/StackLayout&gt;</span>
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <!--#### Changing themes and using theme attributes-->
+        <!--#### Basic css animations-->
+
+        <h3 id="theme">Theme</h3>
+
+        <p>Now that we have the profile page doing something <code class="highlighter-rouge">sort of</code> useful,
+          let’s make it look a little bit better.</p>
+
+        <p>The good news is that NativeScript comes with many built in themes.</p>
+
+        <p><img src="http://docs.nativescript.org/img/theme/color-schemes-all.png" alt="Color Schemes"/></p>
+
+        <p>Most of the standard UI components come with styles that you can use for quick styling improvements.</p>
+
+        <h4 id="text-based-components-can-use">Text-based components can use:</h4>
+
+        <ul>
+          <li><code class="highlighter-rouge">text-primary</code>, <code class="highlighter-rouge">text-muted</code>,
+            <code class="highlighter-rouge">text-danger</code> to change the text color,
+          </li>
+          <li><code class="highlighter-rouge">text-center</code>, <code class="highlighter-rouge">text-left</code>,
+            <code class="highlighter-rouge">text-right</code> to change the alignment of the text,
+          </li>
+          <li><code class="highlighter-rouge">text-lowercase</code>, <code
+              class="highlighter-rouge">text-uppercase</code>, <code class="highlighter-rouge">text-capitalize</code> to
+            apply text transformation
+          </li>
+        </ul>
+
+        <p>For example:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;Label</span> <span class="na">text=</span><span
+            class="s">"Name"</span> <span class="na">class=</span><span class="s">"text-primary text-right"</span><span
+            class="nt">&gt;&lt;/Label&gt;</span>
+<span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Email"</span> <span
+              class="na">class=</span><span class="s">"text-danger"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+</code></pre>
+        </div>
+
+        <h4 id="buttons-can-use">Buttons can use:</h4>
+
+        <ul>
+          <li><code class="highlighter-rouge">btn</code>, <code class="highlighter-rouge">btn-primary</code>, <code
+              class="highlighter-rouge">btn-outline</code>, <code class="highlighter-rouge">btn-active</code> - to
+            change the general style
+          </li>
+          <li><code class="highlighter-rouge">btn-rounded-sm</code> and <code
+              class="highlighter-rouge">btn-rounded-lg</code> - to make the buttons rounded
+          </li>
+          <li><code class="highlighter-rouge">btn-blue</code>, <code class="highlighter-rouge">btn-brown</code>, <code
+              class="highlighter-rouge">btn-forest</code>, <code class="highlighter-rouge">btn-grey</code>, <code
+              class="highlighter-rouge">btn-lemon</code>, <code class="highlighter-rouge">btn-lime</code>, <code
+              class="highlighter-rouge">btn-ruby</code>, <code class="highlighter-rouge">btn-sky</code> - to change the
+            primary color (this only works in conjunction with <code class="highlighter-rouge">btn-primary</code>)
+          </li>
+        </ul>
+
+        <p>For example:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;Button</span> <span class="na">text=</span><span
+            class="s">"Primary"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span
+            class="nt">&gt;&lt;/Button&gt;</span>
+<span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Outline"</span> <span
+              class="na">class=</span><span class="s">"btn btn-outline"</span><span
+              class="nt">&gt;&lt;/Button&gt;</span>
+<span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Orange"</span> <span
+              class="na">class=</span><span class="s">"btn btn-primary btn-ornage"</span><span class="nt">&gt;&lt;/Button&gt;</span>
+<span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Rounded Grey"</span> <span class="na">class=</span><span
+              class="s">"btn btn-primary btn-grey btn-rounded-sm"</span><span class="nt">&gt;&lt;/Button&gt;</span>
+</code></pre>
+        </div>
+
+        <p><img src="images/chapter1/theme-examples.png?raw=true" alt="Recreate UI"/></p>
+
+        <h4 id="other-components-can-use">Other components can use</h4>
+
+        <ul>
+          <li><code class="highlighter-rouge">action-bar</code> - for the default <code class="highlighter-rouge">&lt;ActionBar&gt;</code>
+            styling
+          </li>
+          <li><code class="highlighter-rouge">switch</code> - for the default <code class="highlighter-rouge">&lt;Switch&gt;</code>
+            styling
+          </li>
+          <li><code class="highlighter-rouge">slider</code> - for the default <code class="highlighter-rouge">&lt;Slider&gt;</code>
+            styling
+          </li>
+        </ul>
+
+        <h4 id="margins-and-padding">Margins and padding</h4>
+
+        <p>You can use predefined styles for margins and padding.
+          Use <code class="highlighter-rouge">m</code> for margin and <code class="highlighter-rouge">p</code> for
+          padding. Then optionaly add:</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">-t</code>: top</li>
+          <li><code class="highlighter-rouge">-b</code>: bottom</li>
+          <li><code class="highlighter-rouge">-l</code>: left</li>
+          <li><code class="highlighter-rouge">-r</code>: right</li>
+          <li><code class="highlighter-rouge">-x</code>: horizontal (i.e. both left and right)</li>
+          <li><code class="highlighter-rouge">-y</code>: vertical (i.e. both top and bottom)</li>
+        </ul>
+
+        <p>Finally add the size: <code class="highlighter-rouge">0</code>, <code class="highlighter-rouge">2</code>,
+          <code class="highlighter-rouge">4</code>, <code class="highlighter-rouge">5</code>, <code
+              class="highlighter-rouge">8</code>, <code class="highlighter-rouge">10</code>, <code
+              class="highlighter-rouge">12</code>, <code class="highlighter-rouge">15</code>, <code
+              class="highlighter-rouge">16</code>, <code class="highlighter-rouge">20</code>, <code
+              class="highlighter-rouge">24</code>, <code class="highlighter-rouge">25</code>, <code
+              class="highlighter-rouge">28</code>, <code class="highlighter-rouge">30</code></p>
+
+        <p>For example:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;StackLayout</span> <span
+            class="na">class=</span><span class="s">"m-x-10 p-5"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"name"</span> <span
+              class="na">class=</span><span class="s">"m-l-10"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+  <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Go"</span> <span
+              class="na">class=</span><span class="s">"btn btn-primary p-20"</span><span
+              class="nt">&gt;&lt;/Button&gt;</span>
+<span class="nt">&lt;/StackLayout&gt;</span>
+</code></pre>
+        </div>
+
+        <blockquote>
+          <p>Note: To read more about themes, go to the <a href="https://docs.nativescript.org/ui/theme">NativeScript
+            theme docs</a>.</p>
+        </blockquote>
+
+        <h3 id="exercise-theme">Exercise: Theme</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: NativeScript Theme
+        </h4>
+
+        <h4 id="step-1">Step 1</h4>
+
+        <p>Update the UI to make it look more like the one in the picture below.</p>
+
+        <p><img src="images/chapter1/ui-theme.png?raw=true" alt="Recreate UI"/></p>
+
+        <p><b>HINT 1</b> You may need to update the margin on the <code class="highlighter-rouge">StackLayout</code>, so
+          that the UI components don’t stay too close to the edge of the screen.</p>
+
+        <div class="solution-start"></div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;ActionBar</span> <span
+            class="na">title=</span><span class="s">"Profile"</span> <span class="na">class=</span><span class="s">"action-bar"</span><span
+            class="nt">&gt;</span>
+<span class="nt">&lt;/ActionBar&gt;</span>
+
+<span class="nt">&lt;StackLayout</span> <span class="na">class=</span><span class="s">"form m-10"</span><span
+              class="nt">&gt;</span>
+  <span class="nt">&lt;ScrollView&gt;</span>
+    <span class="nt">&lt;StackLayout&gt;</span>
+      <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Name:"</span> <span class="na">class=</span><span
+              class="s">"text-primary"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;TextField</span>
+        <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">name</span><span class="err">"</span>
+        <span class="na">hint=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/TextField&gt;</span>
+   
+      <span class="nt">&lt;Label</span> <span class="na">text=</span><span class="s">"Password:"</span> <span
+              class="na">class=</span><span class="s">"text-primary"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;TextField</span>
+        <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">password</span><span
+              class="err">"</span>
+        <span class="na">hint=</span><span class="s">"password"</span>
+        <span class="na">secure=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/TextField&gt;</span>
+   
+      <span class="nt">&lt;Label</span> <span class="err">[</span><span class="na">text</span><span
+              class="err">]="'</span><span class="na">Angular</span> <span class="na">Pro:</span> <span
+              class="err">'</span> <span class="err">+</span> <span class="err">((</span><span class="na">profile</span><span
+              class="err">.</span><span class="na">angularPro</span><span class="err">)</span> <span
+              class="err">?</span> <span class="err">'</span><span class="na">Yes</span><span class="err">'</span><span
+              class="na">:</span> <span class="err">'</span><span class="na">No</span><span class="err">')"</span> <span
+              class="na">class=</span><span class="s">"text-primary"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;Switch</span>
+        <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">angularPro</span><span
+              class="err">"</span>
+        <span class="na">class=</span><span class="s">"switch"</span>
+        <span class="na">horizontalAlignment=</span><span class="s">"left"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/Switch&gt;</span>
+   
+      <span class="nt">&lt;Label</span> <span class="err">[</span><span class="na">text</span><span
+              class="err">]="'</span><span class="na">Date</span> <span class="na">of</span> <span
+              class="na">Birth:</span> <span class="err">'</span> <span class="err">+</span> <span
+              class="na">profile</span><span class="err">.</span><span class="na">dob</span><span
+              class="err">.</span><span class="na">toLocaleDateString</span><span class="err">()"</span> <span
+              class="na">class=</span><span class="s">"text-primary"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;DatePicker</span>
+        <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">dob</span><span
+              class="err">"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/DatePicker&gt;</span>
+      
+      <span class="nt">&lt;Label</span> <span class="err">[</span><span class="na">text</span><span
+              class="err">]="'</span><span class="na">Coding</span> <span class="na">power:</span><span
+              class="err">'</span> <span class="err">+</span> <span class="na">profile</span><span
+              class="err">.</span><span class="na">codingPower</span><span class="err">"</span> <span
+              class="na">class=</span><span class="s">"text-primary"</span><span class="nt">&gt;&lt;/Label&gt;</span>
+      <span class="nt">&lt;Slider</span>
+        <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span
+              class="na">profile</span><span class="err">.</span><span class="na">codingPower</span><span
+              class="err">"</span>
+        <span class="err">[</span><span class="na">minValue</span><span class="err">]="</span><span
+              class="na">0</span><span class="err">"</span>
+        <span class="err">[</span><span class="na">maxValue</span><span class="err">]="</span><span class="na">10</span><span
+              class="err">"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/Slider&gt;</span>
+   
+      <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Save"</span> <span
+              class="err">(</span><span class="na">tap</span><span class="err">)="</span><span
+              class="na">save</span><span class="err">()"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span
+              class="nt">&gt;&lt;/Button&gt;</span>
+      <span class="nt">&lt;Button</span> <span class="na">text=</span><span class="s">"Clear"</span> <span
+              class="err">(</span><span class="na">tap</span><span class="err">)="</span><span
+              class="na">clear</span><span class="err">()"</span> <span class="na">class=</span><span class="s">"btn btn-outline"</span><span
+              class="nt">&gt;&lt;/Button&gt;</span>
+    <span class="nt">&lt;/StackLayout&gt;</span>  
+  <span class="nt">&lt;/ScrollView&gt;</span>
+<span class="nt">&lt;/StackLayout&gt;</span>
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <h4 id="step-2">Step 2</h4>
+
+        <p>Open <code class="highlighter-rouge">app.css</code> and change the imported style to each of the values below
+          to see which one you like the most:</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">aqua.css</code></li>
+          <li><code class="highlighter-rouge">blue.css</code></li>
+          <li><code class="highlighter-rouge">brown.css</code></li>
+          <li><code class="highlighter-rouge">core.dark.css</code></li>
+          <li><code class="highlighter-rouge">core.light.css</code></li>
+          <li><code class="highlighter-rouge">forest.css</code></li>
+          <li><code class="highlighter-rouge">grey.css</code></li>
+          <li><code class="highlighter-rouge">lemon.css</code></li>
+          <li><code class="highlighter-rouge">lime.css</code></li>
+          <li><code class="highlighter-rouge">orange.css</code></li>
+          <li><code class="highlighter-rouge">purple.css</code></li>
+          <li><code class="highlighter-rouge">ruby.css</code></li>
+          <li><code class="highlighter-rouge">sky.css</code></li>
+        </ul>
+
+        <h4 id="bonus---use-the-nativescript-themebuilder-tool-to-create-your-own-theme">(Bonus) - Use the NativeScript
+          Themebuilder tool to create your own theme</h4>
+
+        <p>Build your own theme using the <a href="http://www.nativescriptthemebuilder.com/#">NativeScript theme
+          builder</a>. This cool tool lets you view changes in a web browser, download a file, and style your app with a
+          custom CSS file. Try building a patriotic theme with your flag’s colors, then download it to the root folder
+          of your app. To see your theme, edit <code class="highlighter-rouge">app.css</code> to use the core theme and
+          your new custom theme, like this:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>@import 'nativescript-theme-core/css/core.light.css';
+@import '~/custom.css';
+</code></pre>
+        </div>
+
+        <p>Make something beautiful!</p>
+
+        <div class="exercise-end"></div>
+
+        <h3 id="animations">Animations</h3>
+
+        <p>Adding animation to your app can really enhance its attraction and usefulness. There are several ways to add
+          animation:</p>
+
+        <ol>
+          <li>Leveraging Angular-style animation</li>
+          <li>Use NativeScript’s built-in animation library</li>
+          <li>Use Animate.css</li>
+          <li>Use CSS keyframe animation techniques</li>
+          <li>Use Lottie (AirBnB’s library) or Keyframes (by Facebook) animations</li>
+          <li>Use a community-generated animation plugin</li>
+        </ol>
+
+        <p>Let’s work with keyframe animations to give you a feel for how animations work in NativeScript apps.</p>
+
+        <h3 id="exercise-animations">Exercise: Animations</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Animations
+        </h4>
+
+        <p>Enhance the slider so that when you slide it to a value greater than 7, its color changes and the label above
+          it expands. To do this, you need to leverage the Angular bindings we learned about above.</p>
+
+        <p>Give the slider a class so that we can style it in the css, and bind the class.danger-slider property to the
+          value <code class="highlighter-rouge">profile.codingPower &gt; 7</code>:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>class="slider"
+    [class.danger-slider]="profile.codingPower &gt; 7"
+</code></pre>
+        </div>
+
+        <p>Then, edit the Label above the slider to expand when the slider value is more than 7 by giving it a class
+          name that is bound to that value:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>[class.zoom]="profile.codingPower &gt; 7"
+</code></pre>
+        </div>
+
+        <p>Take a look at <code class="highlighter-rouge">profile.component.css</code> to see how the keyframe animation
+          is invoked.</p>
+
+        <div class="solution-start"></div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;Label</span> <span class="err">[</span><span
+            class="na">text</span><span class="err">]="'</span><span class="na">Coding</span> <span
+            class="na">power:</span><span class="err">'</span> <span class="err">+</span> <span
+            class="na">profile</span><span class="err">.</span><span class="na">codingPower</span><span
+            class="err">"</span> <span class="na">class=</span><span class="s">"text-primary"</span> <span
+            class="err">[</span><span class="na">class</span><span class="err">.</span><span class="na">zoom</span><span
+            class="err">]="</span><span class="na">profile</span><span class="err">.</span><span
+            class="na">codingPower</span> <span class="nt">&gt;</span> 7"&gt;<span class="nt">&lt;/Label&gt;</span>
+<span class="nt">&lt;Slider</span>
+  <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span class="na">profile</span><span
+              class="err">.</span><span class="na">codingPower</span><span class="err">"</span>
+  <span class="err">[</span><span class="na">minValue</span><span class="err">]="</span><span class="na">0</span><span
+              class="err">"</span>
+  <span class="err">[</span><span class="na">maxValue</span><span class="err">]="</span><span class="na">10</span><span
+              class="err">"</span>
+  <span class="na">class=</span><span class="s">"slider"</span>
+  <span class="err">[</span><span class="na">class</span><span class="err">.</span><span class="na">danger-slider</span><span
+              class="err">]="</span><span class="na">profile</span><span class="err">.</span><span class="na">codingPower</span> <span
+              class="nt">&gt;</span> 7"&gt;
+<span class="nt">&lt;/Slider&gt;</span>
+</code></pre>
+        </div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nc">.danger-slider</span> <span
+            class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.zoom</span> <span class="p">{</span>
+  <span class="nl">animation-name</span><span class="p">:</span> <span class="n">zoom</span><span class="p">;</span>
+  <span class="nl">animation-duration</span><span class="p">:</span> <span class="m">2s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@keyframes</span> <span class="n">zoom</span> <span class="p">{</span>
+  <span class="nt">from</span> <span class="p">{</span> <span class="nl">transform</span><span class="p">:</span> <span
+              class="n">scale</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span> <span
+              class="m">0.5</span><span class="p">)</span> <span class="p">}</span>
+  <span class="nt">40</span><span class="o">%</span> <span class="p">{</span> <span class="nl">transform</span><span
+              class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1.6</span><span
+              class="p">,</span> <span class="m">1.6</span><span class="p">)</span> <span class="p">}</span>
+  <span class="nt">to</span> <span class="p">{</span>  <span class="nl">transform</span><span class="p">:</span> <span
+              class="n">scale</span><span class="p">(</span><span class="m">1.0</span><span class="p">,</span><span
+              class="m">1.0</span><span class="p">)</span> <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+        </div>
+        <div class="solution-end"></div>
+
+        <h4 id="bonus---change-the-animation-to-spin-instead-of-zoom">(Bonus) - Change the animation to spin, instead of
+          zoom.</h4>
+
+        <p>Instead of zooming, make the label spin around, just for practice. Hint, both <code
+            class="highlighter-rouge">profile.component.html</code> and <code class="highlighter-rouge">profile.component.css</code>
+          need to be edited.</p>
+
+        <div class="solution-start"></div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;Label</span> <span class="err">[</span><span
+            class="na">text</span><span class="err">]="'</span><span class="na">Coding</span> <span
+            class="na">power:</span><span class="err">'</span> <span class="err">+</span> <span
+            class="na">profile</span><span class="err">.</span><span class="na">codingPower</span><span
+            class="err">"</span> <span class="na">class=</span><span class="s">"text-primary"</span> <span
+            class="err">[</span><span class="na">class</span><span class="err">.</span><span class="na">spin</span><span
+            class="err">]="</span><span class="na">profile</span><span class="err">.</span><span
+            class="na">codingPower</span> <span class="nt">&gt;</span> 7"&gt;<span class="nt">&lt;/Label&gt;</span>
+<span class="nt">&lt;Slider</span>
+  <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]="</span><span class="na">profile</span><span
+              class="err">.</span><span class="na">codingPower</span><span class="err">"</span>
+  <span class="err">[</span><span class="na">minValue</span><span class="err">]="</span><span class="na">0</span><span
+              class="err">"</span>
+  <span class="err">[</span><span class="na">maxValue</span><span class="err">]="</span><span class="na">10</span><span
+              class="err">"</span>
+  <span class="na">class=</span><span class="s">"slider"</span>
+  <span class="err">[</span><span class="na">class</span><span class="err">.</span><span class="na">danger-slider</span><span
+              class="err">]="</span><span class="na">profile</span><span class="err">.</span><span class="na">codingPower</span> <span
+              class="nt">&gt;</span> 7"&gt;
+<span class="nt">&lt;/Slider&gt;</span>
+</code></pre>
+        </div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nc">.danger-slider</span> <span
+            class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.spin</span> <span class="p">{</span>
+  <span class="nl">animation-name</span><span class="p">:</span> <span class="n">spin</span><span class="p">;</span>
+  <span class="nl">animation-duration</span><span class="p">:</span> <span class="m">2s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@keyframes</span> <span class="n">spin</span> <span class="p">{</span>
+  <span class="nt">from</span> <span class="p">{</span> <span class="nl">transform</span><span class="p">:</span> <span
+              class="n">rotate</span><span class="p">(</span><span class="m">-30</span><span class="p">)</span> <span
+              class="p">}</span>
+  <span class="nt">40</span><span class="o">%</span> <span class="p">{</span> <span class="nl">transform</span><span
+              class="p">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">420</span><span
+              class="p">)</span> <span class="p">}</span>
+  <span class="nt">to</span> <span class="p">{</span>  <span class="nl">transform</span><span class="p">:</span> <span
+              class="n">rotate</span><span class="p">(</span><span class="m">0</span><span class="p">)}</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <h3 id="nativescript-ui">NativeScript UI</h3>
+
+        <p>Additionaly you can use a free UI library called <a target="_blank" href="https://docs.nativescript.org/angular/ui/overview#nativescript-ui-overview">NativeScript
+          UI</a>.
+          NativeScript UI is a set of components that enable implementing rich-ui applications and contains components
+          like:
+          ListView, Chart, SideDrawer, Calendar, DataForm, Gauges and AutoComplete.</p>
+
+        <p>We won’t cover NativeScript UI in this workshop … but the components are worth looking at.</p>
+
+      </div>
+      <div class="chapter">
+
+        <h2 id="lesson-2---navigation">Lesson 2 - Navigation</h2>
+
+        <h3 id="intro">Intro</h3>
+
+        <p>In this lesson we are going to familiarize ourselves with navigation techniques.</p>
+
+        <h3 id="routing-configuration">Routing configuration</h3>
+
+        <p>The Angular Router enables navigation from one view to the next as users perform application tasks.</p>
+
+        <p>A routed Angular application has one singleton instance of the Router service. When the app’s URL changes,
+          that router looks for a corresponding Route from which it can determine the component to display.</p>
+
+        <p>When you create a brand new {N} app, you will straight away get a sample <code class="highlighter-rouge">Routes</code>
+          configuration, which should look like this:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">routes</span><span
+            class="err">:</span> <span class="nx">Routes</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s2">""</span><span
+              class="p">,</span> <span class="na">redirectTo</span><span class="p">:</span> <span
+              class="s2">"/items"</span><span class="p">,</span> <span class="na">pathMatch</span><span
+              class="p">:</span> <span class="s2">"full"</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s2">"items"</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span class="nx">ItemsComponent</span> <span
+              class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s2">"item/:id"</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span class="nx">ItemDetailComponent</span> <span
+              class="p">},</span>
+<span class="p">];</span>
+</code></pre>
+        </div>
+
+        <p>This tells us 3 things:</p>
+
+        <ul>
+          <li>When the app starts, it should automatically redirect to <code class="highlighter-rouge">items</code>
+            path,
+          </li>
+          <li>If you navigate to <code class="highlighter-rouge">'items'</code>, you will be provided with <code
+              class="highlighter-rouge">ItemsComponent</code>,
+          </li>
+          <li>If you navigate to <code class="highlighter-rouge">'items/somevalue'</code> you will be provided with
+            <code class="highlighter-rouge">ItemDetailComponent</code>, which additionally will receive <code
+                class="highlighter-rouge">somevalue</code> as <code class="highlighter-rouge">id</code></li>
+        </ul>
+
+        <p>As your application grows, so will your list of routes. One way to manage them is to group them into related
+          <code class="highlighter-rouge">parent&lt;-&gt;children</code> groups like this:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">routes</span><span
+            class="err">:</span> <span class="nx">Routes</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">''</span><span
+              class="p">,</span> <span class="na">redirectTo</span><span class="p">:</span> <span
+              class="s1">'/articles'</span><span class="p">,</span> <span class="na">pathMatch</span><span
+              class="p">:</span> <span class="s1">'full'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">'items'</span><span
+              class="p">,</span> <span class="na">children</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">''</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span class="nx">ItemsComponent</span> <span
+              class="p">},</span>
+    <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">':id'</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span class="nx">ItemDetailComponent</span> <span
+              class="p">},</span>
+  <span class="p">]},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">'articles'</span><span
+              class="p">,</span> <span class="na">children</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">''</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span class="nx">ArticlesComponent</span> <span
+              class="p">},</span>
+    <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span
+              class="s1">'read/:id'</span><span class="p">,</span> <span class="na">component</span><span
+              class="p">:</span> <span class="nx">ArticleComponent</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span
+              class="s1">'edit/:id'</span><span class="p">,</span> <span class="na">component</span><span
+              class="p">:</span> <span class="nx">EditArticleComponent</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">'search/:tech/:keyword'</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span class="nx">ArticleSearchResultsComponent</span> <span
+              class="p">},</span>
+  <span class="p">]},</span>
+<span class="p">];</span>
+</code></pre>
+        </div>
+
+        <p>This time:</p>
+
+        <ul>
+          <li>The default path is for <code class="highlighter-rouge">articles</code>,</li>
+          <li><code class="highlighter-rouge">items</code> and <code class="highlighter-rouge">items/:id</code> are
+            grouped together, which means that we could change <code class="highlighter-rouge">items</code> to something
+            else in just one place,
+          </li>
+          <li>We can also navigate to <code class="highlighter-rouge">articles</code>, <code class="highlighter-rouge">articles/read/5</code>,
+            <code class="highlighter-rouge">articles/edit/5</code> and <code class="highlighter-rouge">articles/search/angular/navigation</code>
+            (this will translate to <code class="highlighter-rouge">tech='angular'</code> and <code
+                class="highlighter-rouge">keyword='navigation'</code>)
+          </li>
+        </ul>
+
+        <p>There is a lot more you can do in here, which is out of scope for this workshop. See <a
+            href="https://angular.io/docs/ts/latest/guide/router.html">Angular docs</a> for more info on the subject.
+        </p>
+
+        <h3 id="exercise-routing-configuration">Exercise: Routing configuration</h3>
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Routing configuration
+        </h4>
+
+        <h4 id="step-1">Step 1</h4>
+
+        <p>For this exercise we will use the contents of the <code class="highlighter-rouge">app/color</code> folder,
+          which already contains some pieces of the app that we need.</p>
+
+        <p>Open <code class="highlighter-rouge">app-routing.module.ts</code> and change the <code
+            class="highlighter-rouge">redirectTo</code> of the default route to <code
+            class="highlighter-rouge">'/color'</code></p>
+
+        <pre><code class="language-XML">{ path: '', redirectTo: '/color', pathMatch: 'full' },
+</code></pre>
+
+        <p>If you are using <code class="highlighter-rouge">Playground</code> then you should head to: <a
+            href="https://play.nativescript.org/?template=play-ng&id=fKaGxO">https://play.nativescript.org/?template=play-ng&id=fKaGxO</a>.
+          Please <code class="highlighter-rouge">Fork</code> the Playground app to create your ‘own’ Playground
+          environment.</p>
+
+        <h4 id="step-2">Step 2</h4>
+
+        <p>Now it is time to add routes for the <code class="highlighter-rouge">Red</code> and <code
+            class="highlighter-rouge">RGB</code> components. Update the children of the <code class="highlighter-rouge">color</code>
+          route, so that:</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">'color/red'</code> path will navigate to <code class="highlighter-rouge">RedComponent</code>
+            - you can see how this is done for the <code class="highlighter-rouge">blue</code> example,
+          </li>
+          <li><code class="highlighter-rouge">'color/rgb'</code> + <code class="highlighter-rouge">rgb</code> (as a
+            parameter) path will navigate to <code class="highlighter-rouge">RGBComponent</code> while passing the <code
+                class="highlighter-rouge">rgb</code> parameter
+          </li>
+        </ul>
+
+        <div class="solution-start"></div>
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span> <span
+            class="nl">path</span><span class="p">:</span> <span class="s1">'color'</span><span class="p">,</span> <span
+            class="nx">children</span><span class="err">:</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">''</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span class="nx">ColorComponent</span> <span
+              class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">'blue'</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span class="nx">BlueComponent</span> <span
+              class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">'red'</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span
+              class="nx">RedComponent</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="s1">'rgb/:rgb'</span><span
+              class="p">,</span> <span class="na">component</span><span class="p">:</span> <span
+              class="nx">RGBComponent</span> <span class="p">},</span>
+<span class="p">]},</span>
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <h3 id="navigation-from-template">Navigation from template</h3>
+        <p>One way to add navigation in markup is with the <code class="highlighter-rouge">nsRouterLink</code>
+          directive. It is similar to <code class="highlighter-rouge">routerLink</code> (which is used in the web), but
+          works with NativeScript navigation.</p>
+
+        <p><code class="highlighter-rouge">nsRouterLink</code> expects an array of parameters, which can be matched to
+          one of the routes defined in <code class="highlighter-rouge">app.routes.ts</code>.</p>
+
+        <p>For example, if we want to create a label that should navigate to a “reading” page and pass it a value, such
+          as “5”, we can achieve this by providing an absolute path. That would look something like this:</p>
+
+        <pre><code class="language-XML">&lt;Label text="Angular Navigation" [nsRouterLink]="['/articles/read', '5']"&gt;&lt;/Label&gt;
+</code></pre>
+
+        <h4 id="relative-paths">Relative Paths</h4>
+
+        <p>We can also use relative paths. Where you provide the path based on the page you are currently at.</p>
+
+        <h4 id="children">Children</h4>
+
+        <p>If you are in the articles page (path <code class="highlighter-rouge">'/articles'</code>) and want to
+          navigate to the same pages as in the previous example. You can use <code class="highlighter-rouge">'./name_of_child_path'</code>
+          or <code class="highlighter-rouge">'name_of_child_path'</code>, like this:</p>
+
+        <pre><code class="language-XML">&lt;!--With an embeded param--&gt;
+&lt;Label text="Angular Navigation" [nsRouterLink]="['./read', '5']"&gt;&lt;/Label&gt;
+&lt;!--with a param provided separately--&gt;
+&lt;Label text="Angular Navigation" [nsRouterLink]="['./read', navigationId]"&gt;&lt;/Label&gt;
+</code></pre>
+
+        <p>OR</p>
+
+        <pre><code class="language-XML">&lt;Label text="Angular Navigation" [nsRouterLink]="['read', '5']"&gt;&lt;/Label&gt;
+&lt;Label text="Angular Navigation" [nsRouterLink]="['read', navigationId]"&gt;&lt;/Label&gt;
+</code></pre>
+
+        <h4 id="parent">Parent</h4>
+
+        <p>If you are in the <code class="highlighter-rouge">'articles/read/5'</code> route and you want to provide a
+          relative path back to the parent, you can use <code class="highlighter-rouge">'..'</code>, like this:</p>
+
+        <pre><code class="language-XML">&lt;Label text="Articles" [nsRouterLink]="['..']"&gt;&lt;/Label&gt;
+</code></pre>
+
+        <h4 id="siblings">Siblings</h4>
+
+        <p>If you are in the <code class="highlighter-rouge">'articles/read/5'</code> route and you want to provide a
+          relative path to the edit page or search page, you can use <code class="highlighter-rouge">'../name_of_sibling_path'</code>,
+          like this:</p>
+
+        <pre><code class="language-XML">&lt;Label text="Articles" [nsRouterLink]="['../edit', 5]"&gt;&lt;/Label&gt;
+&lt;Label text="Articles" [nsRouterLink]="['../search', 'angular', 'navigation']"&gt;&lt;/Label&gt;
+</code></pre>
+
+        <h4 id="cheat-sheet">Cheat sheet</h4>
+
+        <pre><code class="language-XML">[nsRouterLink]="['/absolute']"
+&lt;!--Navigate to parent--&gt;
+[nsRouterLink]="['..']"
+
+[nsRouterLink]="['../sibling']"
+
+[nsRouterLink]="['./child']" // or
+[nsRouterLink]="['child']" 
+</code></pre>
+
+        <h4 id="clear-history">Clear History</h4>
+        <p>Also if you add a <code class="highlighter-rouge">clearHistory</code> flag, you can clear the navigation
+          stack. Which means that there won’t be a back button displayed on iOS, or pressing <code
+              class="highlighter-rouge">back</code> on Android will not take you back to this page again.</p>
+
+        <pre><code class="language-XML">&lt;Label text="Back to Articles" [nsRouterLink]="['..']" clearHistory="true"&gt;&lt;/Label&gt;
+</code></pre>
+
+        <h3 id="exercise-navigation-with-nsrouterlink">Exercise: Navigation with nsRouterLink</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Navigation with nsRouterLink
+        </h4>
+
+        <p>Open <code class="highlighter-rouge">color.component.html</code> and update <code class="highlighter-rouge">[nsRouterLink]</code>
+          for each button, so that:</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">Blue</code> button navigates to the <code class="highlighter-rouge">BlueComponent</code>
+          </li>
+          <li><code class="highlighter-rouge">Red</code> button navigates to the <code class="highlighter-rouge">RedComponent</code>
+          </li>
+          <li><code class="highlighter-rouge">Pink</code> button navigates to the <code class="highlighter-rouge">RGBComponent</code>
+            with <code class="highlighter-rouge">'#ff0088'</code> as the parameter
+          </li>
+          <li><code class="highlighter-rouge">Gray</code> button navigates to the <code class="highlighter-rouge">RGBComponent</code>
+            with <code class="highlighter-rouge">'gray'</code> as the parameter
+          </li>
+          <li><code class="highlighter-rouge">Lavender</code> button navigates to the <code class="highlighter-rouge">RGBComponent</code>
+            with <code class="highlighter-rouge">'#bad'</code> as the parameter
+          </li>
+        </ul>
+
+        <blockquote>
+          <p><strong>NOTE</strong>: The parameter you pass to the “rgb” route won’t have an effect on that page—yet.
+            Later in this section you’ll utilize that data to change the colors on the “rgb” component.</p>
+        </blockquote>
+
+        <div class="solution-start"></div>
+
+        <p>Here is the configuration for each:</p>
+
+        <h4 id="blue">Blue</h4>
+        <p><code class="highlighter-rouge">[nsRouterLink]="['/color/blue']"</code> OR <code class="highlighter-rouge">[nsRouterLink]="['blue']"</code>
+        </p>
+
+        <h4 id="red">Red</h4>
+        <p><code class="highlighter-rouge">[nsRouterLink]="['/color/red']"</code> OR <code class="highlighter-rouge">[nsRouterLink]="['red']"</code>
+        </p>
+
+        <h4 id="pink">Pink</h4>
+        <p><code class="highlighter-rouge">[nsRouterLink]="['/color/rgb', '#ff0088']"</code> OR <code
+            class="highlighter-rouge">[nsRouterLink]="['rgb', '#ff0088']"</code></p>
+
+        <h4 id="gray">Gray</h4>
+        <p><code class="highlighter-rouge">[nsRouterLink]="['/color/rgb', 'gray']"</code> OR <code
+            class="highlighter-rouge">[nsRouterLink]="['rgb', 'gray']"</code></p>
+
+        <h4 id="lavender">Lavender</h4>
+        <p><code class="highlighter-rouge">[nsRouterLink]="['/color/rgb', '#bad']"</code> OR <code
+            class="highlighter-rouge">[nsRouterLink]="['rgb', '#bad']"</code></p>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <h3 id="navigation-with-code">Navigation with code</h3>
+        <p>Navigation can also be done with JavaScript.</p>
+
+        <p>For that you will either need the standard <code class="highlighter-rouge">Router</code> from <code
+            class="highlighter-rouge">@angular/router</code>, or <code class="highlighter-rouge">RouterExtensions</code>
+          from <code class="highlighter-rouge">nativescript-angular/router</code>, which comes with additional
+          functionality: to <code class="highlighter-rouge">clearHistory</code>, choose a page <code
+              class="highlighter-rouge">transition</code> or navigate <code class="highlighter-rouge">back</code>.</p>
+
+        <blockquote>
+          <p>Note: If you are working on a project where you need to share the code between web and mobile, then you
+            might want to use the standard Angular <code class="highlighter-rouge">Router</code>. However if your
+            project is mobile only, then you should stick with <code class="highlighter-rouge">RouterExtensions</code>.
+          </p>
+        </blockquote>
+
+        <h4 id="navigation-how-to">Navigation: how to</h4>
+        <p>Once you choose which Router to use, navigation is really easy:</p>
+
+        <ul>
+          <li>import the router you need,</li>
+          <li>inject the router in the constructor,</li>
+          <li>call navigate - just like you did with nsRouterLink</li>
+        </ul>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">Router</span> <span class="p">}</span> <span
+            class="nx">from</span> <span class="s1">'@angular/router'</span><span class="p">;</span>
+<span class="c1">// or</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">RouterExtensions</span> <span
+              class="p">}</span> <span class="nx">from</span> <span class="s1">'nativescript-angular'</span><span
+              class="p">;</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="s1">'my-articles'</span><span class="p">,</span>
+  <span class="na">templateUrl</span><span class="p">:</span> <span
+              class="s1">'./articles/articles.component.html'</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">ArticlesComponent</span> <span
+              class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="kr">private</span> <span
+              class="nx">router</span><span class="err">:</span> <span class="nx">RouterExtensions</span><span
+              class="p">)</span> <span class="p">{</span>
+  <span class="p">}</span>
+
+  <span class="nx">readArticle</span><span class="p">(</span><span class="nx">id</span><span class="err">:</span> <span
+              class="nx">number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span
+              class="nx">navigate</span><span class="p">([</span><span class="s1">'/articles/read'</span><span
+              class="p">,</span> <span class="nx">id</span><span class="p">]);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <h4 id="relative-path">Relative path</h4>
+        <p>To use a relative path you need to:</p>
+
+        <ul>
+          <li>import <code class="highlighter-rouge">ActivatedRoute</code>, which can be used as the <code
+              class="highlighter-rouge">relative point</code>,
+          </li>
+          <li>inject it in the constructor</li>
+          <li>provide it as a parameter for <code class="highlighter-rouge">navigate</code>, as <code
+              class="highlighter-rouge">relativeTo</code></li>
+        </ul>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">RouterExtensions</span> <span class="p">}</span> <span
+            class="nx">from</span> <span class="s1">'nativescript-angular'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">ActivatedRoute</span> <span class="p">}</span> <span
+              class="nx">from</span> <span class="s1">'@angular/router'</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="s1">'my-articles'</span><span class="p">,</span>
+  <span class="na">templateUrl</span><span class="p">:</span> <span
+              class="s1">'./articles/articles.component.html'</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">ArticlesComponent</span> <span
+              class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span>
+    <span class="kr">private</span> <span class="nx">router</span><span class="err">:</span> <span class="nx">RouterExtensions</span><span
+              class="p">,</span>
+    <span class="kr">private</span> <span class="nx">route</span><span class="err">:</span> <span class="nx">ActivatedRoute</span><span
+              class="p">)</span> <span class="p">{</span>
+  <span class="p">}</span>
+
+  <span class="nx">readArticle</span><span class="p">(</span><span class="nx">id</span><span class="err">:</span> <span
+              class="nx">number</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span
+              class="nx">navigate</span><span class="p">([</span><span class="s1">'./read'</span><span
+              class="p">,</span> <span class="nx">id</span><span class="p">],</span> <span class="p">{</span> <span
+              class="na">relativeTo</span><span class="p">:</span> <span class="k">this</span><span
+              class="p">.</span><span class="nx">route</span> <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <h4 id="cheat-sheet-1">Cheat sheet</h4>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">this</span><span
+            class="p">.</span><span class="nx">router</span><span class="p">.</span><span
+            class="nx">navigate</span><span class="p">([</span><span class="s1">'/absolute/path'</span><span class="p">]);</span>
+<span class="c1">//navigate to parent</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span
+              class="nx">navigate</span><span class="p">([</span><span class="s1">'..'</span><span class="p">],</span>         <span
+              class="p">{</span><span class="na">relativeTo</span><span class="p">:</span> <span
+              class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">});</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span
+              class="nx">navigate</span><span class="p">([</span><span class="s1">'../sibling'</span><span
+              class="p">],</span> <span class="p">{</span><span class="na">relativeTo</span><span
+              class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span
+              class="p">});</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span
+              class="nx">navigate</span><span class="p">([</span><span class="s1">'./child'</span><span
+              class="p">],</span>    <span class="p">{</span><span class="na">relativeTo</span><span class="p">:</span> <span
+              class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">});</span> <span
+              class="c1">// or</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span
+              class="nx">navigate</span><span class="p">([</span><span class="s1">'child'</span><span
+              class="p">],</span>      <span class="p">{</span><span class="na">relativeTo</span><span
+              class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span
+              class="p">});</span>
+</code></pre>
+        </div>
+
+        <h4 id="clear-history-1">Clear History</h4>
+
+        <p>To clear history just provide <code class="highlighter-rouge">clearHistory</code> into <code
+            class="highlighter-rouge">navigate</code>, like this:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">this</span><span
+            class="p">.</span><span class="nx">router</span><span class="p">.</span><span
+            class="nx">navigate</span><span class="p">([</span><span class="s1">'/articles'</span><span
+            class="p">,</span> <span class="p">{</span> <span class="na">clearHistory</span><span
+            class="p">:</span> <span class="kc">true</span> <span class="p">}]);</span>
+</code></pre>
+        </div>
+
+        <p>Please note that you must use <code class="highlighter-rouge">RouterExtensions</code> for this to work. Also,
+          <code class="highlighter-rouge">clearHistory</code> works only with <code class="highlighter-rouge">page-router-outlet</code>;
+          this doesn’t work with <code class="highlighter-rouge">router-outlet</code>.</p>
+
+        <h4 id="navigating-back">Navigating back</h4>
+
+        <p>To navigate back, you can use <code class="highlighter-rouge">RouterExtensions</code> functionality to call
+          either:</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">this.router.back()</code> - always takes us to back the previous view from
+            the navigation stack,
+          </li>
+          <li><code class="highlighter-rouge">this.router.backToPreviousPage()</code> - always takes us back to the
+            previous page from the navigation stack, skipping navigation stack items on the same page.
+          </li>
+        </ul>
+
+        <p>What is the difference?</p>
+
+        <p>Let’s imagine you navigated through a number of paths in this order.</p>
+
+        <ul>
+          <li>navigate <code class="highlighter-rouge">/articles</code></li>
+          <li>navigate <code class="highlighter-rouge">/articles/read/1</code></li>
+          <li>navigate <code class="highlighter-rouge">/articles/read/2</code></li>
+          <li>navigate <code class="highlighter-rouge">/articles/edit/3</code></li>
+        </ul>
+
+        <p>So now we are at <code class="highlighter-rouge">/articles/edit/3</code>.</p>
+
+        <p>Calling <code class="highlighter-rouge">back</code> or <code
+            class="highlighter-rouge">backToPreviousPage</code>, will both result in navigating to:
+          <code class="highlighter-rouge">/articles/read/2</code>.</p>
+
+        <p>Now calling <code class="highlighter-rouge">back</code> would take us to <code class="highlighter-rouge">/articles/read/1</code>,
+          which is another article in the same page.
+          However calling <code class="highlighter-rouge">backToPreviousPage</code> from <code
+              class="highlighter-rouge">/articles/read/2</code>, would take us to <code class="highlighter-rouge">/articles</code>.
+        </p>
+
+        <h4 id="default-ios-and-android-back-operations">Default iOS and Android back operations</h4>
+
+        <p>The default <code class="highlighter-rouge">back</code> button which appears in the iOS <code
+            class="highlighter-rouge">&lt;ActionBar&gt;</code> performs <code class="highlighter-rouge">backToPreviousPage</code>,
+          while the Android back button performs <code class="highlighter-rouge">back</code>.</p>
+
+        <h3 id="exercise-navigation-with-code">Exercise: Navigation with code</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Navigation with code
+        </h4>
+
+        <p>In this exercise we will play with the <code class="highlighter-rouge">blue</code> component. The <code
+            class="highlighter-rouge">blue.component.html</code> already contains four buttons, each calling a different
+          function.</p>
+
+        <p>Your task is to implement the empty functions in <code class="highlighter-rouge">blue.component.ts</code>, so
+          that:</p>
+
+        <ul>
+          <li>goRed() navigates to the <code class="highlighter-rouge">Red</code> page</li>
+          <li>goPink() navigates to the <code class="highlighter-rouge">RGB</code> page with <code
+              class="highlighter-rouge">this.pink</code> as the parameter
+          </li>
+          <li>goBack() navigates back</li>
+          <li>goHome() navigates home whilst clearing the navigation history</li>
+        </ul>
+
+        <div class="solution-start"></div>
+
+        <h4 id="gored-absolute-solution">goRed (Absolute Solution)</h4>
+        <p><code class="highlighter-rouge">this.router.navigate(['/color/red']);</code></p>
+
+        <h4 id="gopink">goPink</h4>
+
+        <p><code class="highlighter-rouge">this.router.navigate(['/color/rgb', this.pink]);</code></p>
+
+        <h4 id="goback">goBack</h4>
+
+        <p><code class="highlighter-rouge">this.router.back();</code></p>
+
+        <h4 id="gohome">goHome</h4>
+
+        <p><code class="highlighter-rouge">this.router.navigate(['/color'], { clearHistory: true });</code></p>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <h3 id="receiving-parameters">Receiving parameters</h3>
+
+        <p>For components that are expected to receive parameters from the route navigation, you need to use <code
+            class="highlighter-rouge">ActivatedRoute</code>.</p>
+
+        <p>You just have to perform the appropriate imports:</p>
+
+        <h4 id="import">Import</h4>
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">ActivatedRoute</span> <span class="p">}</span> <span
+            class="nx">from</span> <span class="s1">'@angular/router'</span><span class="p">;</span>
+</code></pre>
+        </div>
+
+        <h4 id="inject">Inject</h4>
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">export</span> <span class="kr">class</span> <span
+            class="nx">ArticleSearchResultsComponent</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="kr">private</span> <span
+              class="nx">route</span><span class="err">:</span> <span class="nx">ActivatedRoute</span><span
+              class="p">)</span> <span class="p">{</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <h4 id="use">Use</h4>
+
+        <p>Here we have two options. You can take a snapshot, which will be triggered only when we navigate to this page
+          from another page.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">ngOnInit</span><span
+            class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">tech</span> <span class="o">=</span> <span
+              class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span
+              class="nx">snapshot</span><span class="p">.</span><span class="nx">params</span><span
+              class="p">[</span><span class="s1">'tech'</span><span class="p">];</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">keyword</span> <span class="o">=</span> <span
+              class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span
+              class="nx">snapshot</span><span class="p">.</span><span class="nx">params</span><span
+              class="p">[</span><span class="s1">'keyword'</span><span class="p">];</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">searchArticles</span><span class="p">(</span><span
+              class="k">this</span><span class="p">.</span><span class="nx">tech</span><span class="p">,</span> <span
+              class="k">this</span><span class="p">.</span><span class="nx">keyword</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <h4 id="navigate-to-self">Navigate to self</h4>
+
+        <p>Using a snapshot will not work if we try to navigate from the search to itself, but with different
+          parameters. To make this work, we need to use <code class="highlighter-rouge">params.forEach</code> instead.
+        </p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">ngOnInit</span><span
+            class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span
+              class="nx">params</span>
+    <span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">params</span> <span
+              class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">tech</span> <span class="o">=</span> <span
+              class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span
+              class="nx">snapshot</span><span class="p">.</span><span class="nx">params</span><span
+              class="p">[</span><span class="s1">'tech'</span><span class="p">];</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">keyword</span> <span class="o">=</span> <span
+              class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span
+              class="nx">snapshot</span><span class="p">.</span><span class="nx">params</span><span
+              class="p">[</span><span class="s1">'keyword'</span><span class="p">];</span>
+
+      <span class="k">this</span><span class="p">.</span><span class="nx">searchArticles</span><span
+              class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">tech</span><span
+              class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">keyword</span><span
+              class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <h3 id="exercise-receiving-parameters">Exercise: Receiving parameters</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Receiving parameters
+        </h4>
+
+        <p>In this exercise we will play with the <code class="highlighter-rouge">rgb</code> component: <code
+            class="highlighter-rouge">rgb.component.ts</code>. Currently every time you navigate to <code
+            class="highlighter-rouge">rgb</code> the input parameters are getting ignored. Your task is to intercept the
+          ‘rgb’ parameter and update <code class="highlighter-rouge">this.rgb</code>.</p>
+
+        <div class="solution-start"></div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">ngOnInit</span><span
+            class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">route</span><span class="p">.</span><span
+              class="nx">params</span>
+    <span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">params</span> <span
+              class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span
+              class="nx">rgb</span> <span class="o">=</span> <span class="nx">params</span><span class="p">[</span><span
+              class="s1">'rgb'</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <h3 id="page-transitions">Page Transitions</h3>
+
+        <p>One of the great things about NativeScript is its ability to use native animations and page transitions with
+          very little effort.</p>
+
+        <p><a target="_blank" href="http://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationtransition.html">Here is
+          a list of all available navigation transitions</a></p>
+
+        <p><a target="_blank" href="http://docs.nativescript.org/api-reference/modules/_ui_enums_.animationcurve.html">Here is a list of
+          all available animation curves</a></p>
+
+        <h4 id="transition-via-html">Transition via html</h4>
+
+        <p>To add pageTransition in html, just add <code class="highlighter-rouge">pageTransition</code> with a name of
+          the transition you need:</p>
+
+        <pre><code class="language-XML">&lt;Button
+  text="Open Path"
+  [nsRouterLink]="['/path']"
+  pageTransition="slideBottom"&gt;
+&lt;/Button&gt;
+</code></pre>
+
+        <h4 id="transition-via-code">Transition via code</h4>
+
+        <p>To add page transition in JavaScript, just add a transition object to the <code class="highlighter-rouge">navigate</code>
+          options. Just like this:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">this</span><span
+            class="p">.</span><span class="nx">router</span><span class="p">.</span><span
+            class="nx">navigate</span><span class="p">([</span><span class="s1">'/relative/path'</span><span class="p">],</span> <span
+            class="p">{</span>
+  <span class="na">transition</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'slideBottom'</span><span class="p">,</span>
+    <span class="na">duration</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="na">curve</span><span class="p">:</span> <span class="s1">'linear'</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+        </div>
+
+        <h3 id="exercise-page-transitions">Exercise: Page Transitions</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Page Transitions
+        </h4>
+
+        <p>In this exercise we will play with the <code class="highlighter-rouge">color</code> and <code
+            class="highlighter-rouge">red</code> components.</p>
+
+        <h4 id="step-1-1">Step 1</h4>
+
+        <p>Your task is to update the buttons in <code class="highlighter-rouge">color.component.html</code>, so that:
+        </p>
+
+        <ul>
+          <li>The <code class="highlighter-rouge">Blue</code> button triggers <code
+              class="highlighter-rouge">curl</code> transition
+          </li>
+          <li>The <code class="highlighter-rouge">Red</code> button triggers the <code
+              class="highlighter-rouge">fade</code> transition
+          </li>
+          <li>The <code class="highlighter-rouge">Pink</code>, <code class="highlighter-rouge">Gray</code> and <code
+              class="highlighter-rouge">#bad</code> buttons trigger the <code class="highlighter-rouge">flip</code>
+            transition
+          </li>
+        </ul>
+
+        <div class="solution-start"></div>
+
+        <ul>
+          <li><code class="highlighter-rouge">Blue</code> =&gt; <code
+              class="highlighter-rouge">pageTransition="curl"</code></li>
+          <li><code class="highlighter-rouge">Red</code> =&gt; <code
+              class="highlighter-rouge">pageTransition="fade"</code></li>
+          <li><code class="highlighter-rouge">Pink</code>, <code class="highlighter-rouge">Gray</code> and <code
+              class="highlighter-rouge">#bad</code> =&gt; <code class="highlighter-rouge">pageTransition="flip"</code>
+          </li>
+        </ul>
+
+        <div class="solution-end"></div>
+
+        <h4 id="step-2-1">Step 2</h4>
+
+        <p><code class="highlighter-rouge">red.component.html</code> already contains 4 buttons, each calling a
+          different function.</p>
+
+        <p>Your task is to implement the empty functions in <code class="highlighter-rouge">red.component.ts</code>, so
+          that:</p>
+
+        <ul>
+          <li>goBlue() navigates to the <code class="highlighter-rouge">Blue</code> page with page transition <code
+              class="highlighter-rouge">slideTop</code>, duration <code class="highlighter-rouge">2 seconds</code> and
+            curve <code class="highlighter-rouge">spring</code></li>
+          <li>goGray() navigates to the <code class="highlighter-rouge">RGB</code> page with <code
+              class="highlighter-rouge">gray</code> as the parameter and page transition <code
+              class="highlighter-rouge">fade</code> and duration <code class="highlighter-rouge">1 second</code></li>
+        </ul>
+
+        <div class="solution-start"></div>
+
+        <h4 id="goblue">goBlue</h4>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>this.router.navigate(['/color/blue'], {
+  transition: {
+    name: 'slideTop',
+    duration: 2000,
+    curve: 'spring'
+  }
+});
+</code></pre>
+        </div>
+
+        <h4 id="gogray">goGray</h4>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>this.router.navigate(['/color/rgb', 'gray'], {
+  transition: {
+    name: 'fade',
+    duration: 1000
+  }
+});
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+      </div>
+      <div class="chapter">
+
+        <h2 id="lesson-3---components-and-services">Lesson 3 - Components and Services</h2>
+
+        <h3 id="services">Services</h3>
+        <!-- https://angular.io/docs/ts/latest/tutorial/toh-pt4.html-->
+
+        <p>Services are JavaScript functions that are responsible for doing a specific task. Angular services are
+          injected using a
+          Dependency Injection mechanism and include the value, function or feature that is required by the application.
+          There is nothing especially related to Services in NativeScript Angular–there is no ServiceBase class–but
+          still
+          services can be treated as fundamental to Angular applications.</p>
+
+        <h4 id="creating-a-service">Creating a service</h4>
+
+        <p>Creating a <code class="highlighter-rouge">Service</code> is really simple. You need to import <code
+            class="highlighter-rouge">Injectable</code> function and apply it as the <code class="highlighter-rouge">@Injectable</code>
+          decorator. Then we need to create a class for our service and <code class="highlighter-rouge">export</code>
+          it:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="nx">from</span> <span
+            class="s1">'@angular/core'</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Injectable</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">MyHappyService</span> <span
+              class="p">{</span>
+  
+  <span class="kr">public</span> <span class="nx">doSomethingFun</span><span class="p">()</span> <span
+              class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span
+              class="s1">'I am a happy bunny... hop, hop, hop'</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <h4 id="naming-convention">Naming convention</h4>
+
+        <p>Following the naming convention in Angular, the above service should be placed in a file called: <code
+            class="highlighter-rouge">my-happy.service.ts</code>.
+          This is basically the name of the class in lower case, each word (excluding the word <code
+              class="highlighter-rouge">service</code>) separated with <code class="highlighter-rouge">-</code> and
+          followed by <code class="highlighter-rouge">.service.ts</code>.</p>
+
+        <p>The same naming convention applies to all files in an Angular app like: <code class="highlighter-rouge">currency.pipe.ts</code>,
+          <code class="highlighter-rouge">navigation-menu.component.ts</code>,
+          <code class="highlighter-rouge">login.model.ts</code>.</p>
+
+        <h4 id="adding-the-service-to-appmodulests">Adding the service to app.modules.ts</h4>
+
+        <p>In order to make our service available in the app, you need to add to <code class="highlighter-rouge">providers</code>
+          in the <code class="highlighter-rouge">@NgModule</code>.
+          The global <code class="highlighter-rouge">@NgModule</code> is located in <code class="highlighter-rouge">app.module.ts</code>.
+        </p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">MyHappyService</span> <span class="p">}</span> <span
+            class="nx">from</span> <span class="s1">'./my-happy.service'</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+  <span class="na">bootstrap</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nx">AppComponent</span>
+  <span class="p">],</span>
+  <span class="na">imports</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nx">NativeScriptModule</span><span class="p">,</span>
+    <span class="nx">AppRoutingModule</span><span class="p">,</span>
+    <span class="nx">NativeScriptHttpClientModule</span><span class="p">,</span>
+    <span class="nx">NativeScriptFormsModule</span><span class="p">,</span>
+  <span class="p">],</span>
+  <span class="na">declarations</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nx">AppComponent</span><span class="p">,</span>
+    <span class="nx">ProfileComponent</span>
+  <span class="p">],</span>
+  <span class="na">providers</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nx">MyHappyService</span>
+  <span class="p">],</span>
+  <span class="na">schemas</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nx">NO_ERRORS_SCHEMA</span>
+  <span class="p">]</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="p">{</span> <span
+              class="p">}</span>
+</code></pre>
+        </div>
+
+        <h4 id="injecting-services">Injecting services</h4>
+
+        <!--Angular docs: https://angular.io/docs/ts/latest/guide/dependency-injection.html-->
+        <p>In order to use a service in a component, we need to inject it in the component’s <code
+            class="highlighter-rouge">constructor</code>.</p>
+
+        <blockquote>
+          <p>Note: You can also inject services into other services or pipes.</p>
+        </blockquote>
+
+        <p>This is done like this:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">constructor</span><span
+            class="p">(</span><span class="kr">private</span> <span class="nx">myHappyService</span><span
+            class="err">:</span> <span class="nx">MyHappyService</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//constructor code</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <p>Here is how you inject and then use a service:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">MyHappyService</span> <span class="p">}</span> <span
+            class="nx">from</span> <span class="s1">'../my-happy.service'</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+  <span class="na">selector</span><span class="p">:</span> <span class="s1">'app-mood'</span><span class="p">,</span>
+  <span class="na">templateUrl</span><span class="p">:</span> <span class="s1">'./mood/mood.component.html'</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">MoodComponent</span> <span
+              class="p">{</span>
+
+  <span class="nx">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">myHappyService</span><span
+              class="err">:</span> <span class="nx">MyHappyService</span><span class="p">)</span> <span
+              class="p">{</span>
+  <span class="p">}</span>
+
+  <span class="nx">showYourMood</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">myHappyService</span><span
+              class="p">.</span><span class="nx">doSomethingFun</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <h3 id="http">Http</h3>
+
+        <p>NativeScript comes with its own implementation of the <code class="highlighter-rouge">Http</code> module,
+          which uses <code class="highlighter-rouge">Android</code> and <code class="highlighter-rouge">iOS</code>
+          native functionality
+          to perform the calls.</p>
+
+        <p>This is exposed as <code class="highlighter-rouge">NativeScriptHttpClientModule</code>, which implements the
+          same interface as the web <code class="highlighter-rouge">HttpClient</code> module.</p>
+
+        <h4 id="http-adding-the-module-to-the-app">Http: adding the module to the app</h4>
+
+        <p>This means that all you have to do is declare our NativeScript wrapper in the respective module file and
+          Dependency
+          Injection will take care of the rest.</p>
+
+        <p>This is done by adding <code class="highlighter-rouge">NativeScriptHttpClientModule</code> to <code
+            class="highlighter-rouge">@NgModule</code> <code class="highlighter-rouge">imports</code>.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">NativeScriptHttpClientModule</span> <span class="p">}</span> <span
+            class="nx">from</span> <span class="s2">"nativescript-angular/http-client"</span><span class="p">;</span>
+</code></pre>
+        </div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">imports</span><span
+            class="err">:</span> <span class="p">[</span>
+  <span class="p">...</span>
+  <span class="nx">NativeScriptHttpClientModule</span><span class="p">,</span>
+<span class="p">],</span>
+</code></pre>
+        </div>
+
+        <p>From this point onwards the code that uses the <code class="highlighter-rouge">HttpClient</code> module is
+          <code class="highlighter-rouge">exactly the same</code> as the code you would write for
+          a <code class="highlighter-rouge">web application</code>.</p>
+
+        <p>This gives us a high level Angular <code class="highlighter-rouge">Http</code> module that is capable of
+          performing various request natively for <code class="highlighter-rouge">Android</code>,
+          <code class="highlighter-rouge">iOS</code> and <code class="highlighter-rouge">Web</code>.</p>
+
+        <p><img src="images/chapter3/http.png?raw=true" alt="Http"/></p>
+
+        <h4 id="http-injecting-the-service">Http: Injecting the service</h4>
+
+        <p>Then you can <code class="highlighter-rouge">import</code> and <code class="highlighter-rouge">Inject</code>
+          the <code class="highlighter-rouge">HttpClient</code> module where you are planning to use it.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">HttpClient</span> <span class="p">}</span> <span class="nx">from</span> <span
+            class="s1">'@angular/common/http'</span><span class="p">;</span>
+</code></pre>
+        </div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">constructor</span><span
+            class="p">(</span><span class="kr">private</span> <span class="nx">http</span><span
+            class="err">:</span> <span class="nx">HttpClient</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <h3 id="rxjs">RxJS</h3>
+
+        <p>Before we call an API we need to first discuss RxJS. You may have heard of it before - if so feel free to
+          skip ahead.
+          <a target="_blank" href="http://reactivex.io/rxjs/">RxJS</a> is the ReactiveX library for JavaScript.</p>
+
+        <p>RxJS is a library for using Observables. We aren’t going to discuss observables in detail, but, you do need
+          to know that
+          observables are objects that allow you to subscribe events. For example, if a value changes in an observable,
+          subscribers will be notified of the change. Luckily for us NativeScript and Angular already know how to use
+          observables
+          so we can bind observable objects straight to our UI when we receive them back from our API calls.</p>
+
+        <h4 id="http-calling-the-service">Http: calling the service</h4>
+
+        <p>The http module has a bunch of useful functions like, <code class="highlighter-rouge">get</code>, <code
+            class="highlighter-rouge">post</code>, <code class="highlighter-rouge">put</code>, <code
+            class="highlighter-rouge">delete</code> and others.
+          Each takes a <code class="highlighter-rouge">url</code> as a parameter and optional <code
+              class="highlighter-rouge">options</code>, and then they return an <code class="highlighter-rouge">Observable</code>
+          with a <code class="highlighter-rouge">Response</code>.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">get</span><span
+            class="p">(</span><span class="nx">url</span><span class="err">:</span> <span class="nx">string</span><span
+            class="p">,</span> <span class="nx">options</span><span class="p">?:</span> <span class="nx">RequestOptionsArgs</span><span
+            class="p">)</span><span class="err">:</span> <span class="nx">Observable</span><span
+            class="o">&lt;</span><span class="nx">Response</span><span class="o">&gt;</span>
+</code></pre>
+        </div>
+
+        <p>Example of how to call <code class="highlighter-rouge">get</code> and <code class="highlighter-rouge">subscribe</code>
+          to the <code class="highlighter-rouge">Observable</code> result:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">doSomething</span><span class="p">()</span> <span
+            class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span
+              class="nx">get</span><span class="p">(</span><span
+              class="s1">'http://api.someopendata.org/cities'</span><span class="p">)</span> <span class="c1">// make the call</span>
+  <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>                                              <span
+              class="c1">// pipe() let you combine multiple functions into a single function</span>
+    <span class="nx">map</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span
+              class="nx">result</span><span class="p">.</span><span class="nx">cities</span><span class="p">)</span>                      <span
+              class="c1">// map the result to the object we need to return</span>
+  <span class="p">)</span>
+  <span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span>                                         <span
+              class="c1">// subscribe and do something with the result</span>
+    <span class="nx">cities</span> <span class="o">=&gt;</span> <span class="nx">console</span><span
+              class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cities</span><span
+              class="p">),</span>
+    <span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span
+              class="p">.</span><span class="nx">error</span><span class="p">(</span><span
+              class="s1">'Error: '</span> <span class="o">+</span> <span class="nx">err</span><span class="p">),</span>
+    <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span
+              class="nx">log</span><span class="p">(</span><span class="s1">'Completed!'</span><span class="p">)</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <h4 id="http-adding-headers-to-http-calls">Http: Adding Headers to http calls</h4>
+
+        <p>If you need to pass headers into a <code class="highlighter-rouge">http</code> call, you can construct it by
+          using <code class="highlighter-rouge">HttpHeaders</code> class, append data and then
+          add it to <code class="highlighter-rouge">options?</code>.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">HttpClient</span><span class="p">,</span> <span
+            class="nx">HttpHeaders</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">"@angular/common/http"</span><span
+            class="p">;</span>
+</code></pre>
+        </div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">myHeaders</span> <span
+            class="o">=</span> <span class="k">new</span> <span class="nx">HttpHeaders</span><span class="p">();</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span
+              class="s1">'key'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">);</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span
+              class="p">(</span><span class="s1">'http://api.someopendata.org/cities'</span><span
+              class="p">,</span> <span class="p">{</span> <span class="na">headers</span><span class="p">:</span> <span
+              class="nx">myHeaders</span> <span class="p">})</span>
+
+</code></pre>
+        </div>
+
+        <h4 id="http-constructing-url-search-params">Http: Constructing URL search params</h4>
+
+        <p>If you need to pass query parameters (like service?mood=’happy’&amp;face=’round’) into a <code
+            class="highlighter-rouge">http</code> call, you can construct it
+          by using <code class="highlighter-rouge">HttpParams</code> class, append query params and then add it to <code
+              class="highlighter-rouge">options?</code>.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">HttpClient</span><span class="p">,</span> <span
+            class="nx">HttpHeaders</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">"@angular/common/http"</span><span
+            class="p">;</span>
+</code></pre>
+        </div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">searchParams</span><span
+            class="err">:</span> <span class="nx">HttpParams</span> <span class="o">=</span> <span class="k">new</span> <span
+            class="nx">HttpParams</span><span class="p">();</span>
+<span class="nx">searchParams</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span
+              class="s1">'mood'</span><span class="p">,</span> <span class="s1">'happy'</span><span class="p">);</span>
+<span class="nx">searchParams</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span
+              class="s1">'face'</span><span class="p">,</span> <span class="s1">'round'</span><span class="p">);</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span
+              class="p">(</span><span class="s1">'http://api.someopendata.org/cities'</span><span
+              class="p">,</span> <span class="p">{</span> <span class="na">headers</span><span class="p">:</span> <span
+              class="nx">myHeaders</span><span class="p">,</span> <span class="na">params</span><span class="p">:</span> <span
+              class="nx">searchParams</span> <span class="p">})</span>
+</code></pre>
+        </div>
+
+        <h3 id="exercise-launch-service">Exercise: Launch Service</h3>
+
+        <p>For this exercise we will use APIs from SpaceX to get information for upcoming and past launches.
+          All code for ths exercise is located in the <code class="highlighter-rouge">spacex</code> folder. You can find
+          the <code class="highlighter-rouge">LaunchService</code> in <code class="highlighter-rouge">spacex/services/launch.service.ts</code>.
+        </p>
+
+        <p>If you are using <code class="highlighter-rouge">Playground</code> then you should head to: <a
+            href="https://play.nativescript.org/?template=play-ng&amp;id=OAc6BX&amp;v=4">https://play.nativescript.org/?template=play-ng&amp;id=OAc6BX&amp;v=4</a>
+          Please <code class="highlighter-rouge">Fork</code> the Playground app to create your ‘own’ Playground
+          environment.</p>
+
+        <p>You can find the documentation for the <a target="_blank" href="https://github.com/r-spacex/SpaceX-API/tree/master/docs">SpaceX
+          APIs here</a>.</p>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Injecting SpaceX launch service
+        </h4>
+
+        <p>Let’s start with changing the default route in <code class="highlighter-rouge">app-routing.module.ts</code>
+          to <code class="highlighter-rouge">'/spacex'</code>:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span> <span
+            class="nl">path</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span> <span
+            class="nx">redirectTo</span><span class="err">:</span> <span class="s1">'/spacex'</span><span
+            class="p">,</span> <span class="nx">pathMatch</span><span class="err">:</span> <span
+            class="s1">'full'</span> <span class="p">},</span>
+</code></pre>
+        </div>
+
+        <p>The app will start but when you tap the button <code class="highlighter-rouge">View Launches</code>, it will
+          fail with the following error:
+          <code class="highlighter-rouge">Error: No provider for LaunchService!</code></p>
+
+        <p>You need to add the <code class="highlighter-rouge">LaunchService!</code> to <code class="highlighter-rouge">app.module.ts</code>.
+        </p>
+
+        <p><b>HINT</b> Remember that this should be added to the providers.</p>
+
+        <div class="solution-start"></div>
+
+        <p>First import <code class="highlighter-rouge">LaunchService</code></p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">LaunchService</span> <span class="p">}</span> <span
+            class="nx">from</span> <span class="s2">"./spacex/services/launchService"</span>
+</code></pre>
+        </div>
+
+        <p>And then add this inside <code class="highlighter-rouge">@NgModule</code>:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">providers</span><span
+            class="err">:</span> <span class="p">[</span>
+  <span class="nx">LaunchService</span>
+<span class="p">],</span>
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <p>Now the app should be loading launches without any issues. However not all API calls are implemented yet.
+          The API call for getting the details of a past launch should still be implemented.</p>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Implementing the http calls
+        </h4>
+
+        <p>For your convenience the <code class="highlighter-rouge">http</code> service is already injected into <code
+            class="highlighter-rouge">LaunchService</code>.</p>
+
+        <h4 id="step-1---make-it-work">Step 1 - Make it work</h4>
+
+        <p>If you open <code class="highlighter-rouge">launch.service.ts</code> you will notice that <code
+            class="highlighter-rouge">getUpcomingLaunches</code> and <code
+            class="highlighter-rouge">getPastLaunches</code> are already implemented,
+          which are the API calls required to display the data in the <code
+              class="highlighter-rouge">ListComponent</code>.</p>
+
+        <p>If you select the tab <code class="highlighter-rouge">Previous Launches</code> and tap a specific launch, you
+          should see the details of that specifc launch.</p>
+
+        <h4 id="step-2---implement-the-missing-function">Step 2 - Implement the missing function</h4>
+
+        <p>Your job is to implement the missing implementation for function <code class="highlighter-rouge">getLaunchDetails</code>.
+          This function should make a call to
+          <code class="highlighter-rouge">https://api.spacexdata.com/v3/launches/{flight_number}</code> with the <code
+              class="highlighter-rouge">flight_number</code> param.</p>
+
+        <p>You will need to:</p>
+
+        <ul>
+          <li>construct the <code class="highlighter-rouge">url</code> - you can use the <code
+              class="highlighter-rouge">baseUrl</code> property as the basis
+          </li>
+          <li>use the <code class="highlighter-rouge">http</code> service to call <code
+              class="highlighter-rouge">get()</code></li>
+          <li>return an <code class="highlighter-rouge">Observable</code> for type <code class="highlighter-rouge">Launch</code>
+          </li>
+        </ul>
+
+        <div class="solution-start"></div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>  <span class="kr">public</span> <span class="nx">getLaunchDetails</span><span
+            class="p">(</span><span class="nx">flight_number</span><span class="err">:</span> <span
+            class="nx">number</span><span class="p">)</span><span class="err">:</span> <span
+            class="nx">Observable</span><span class="o">&lt;</span><span class="nx">Launch</span><span
+            class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span
+              class="p">.</span><span class="nx">get</span><span class="o">&lt;</span><span
+              class="nx">Launch</span><span class="o">&gt;</span><span class="p">(</span><span class="err">`</span><span
+              class="nx">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span
+              class="nx">baseUrl</span><span class="p">}</span><span class="sr">/${flight_number}`</span><span
+              class="se">)</span><span class="err">;
+</span>  <span class="p">}</span>
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <h4 id="step-3---only-show-past-launches-for-this-year-2019">Step 3 - Only show past launches for this year
+          (2019)</h4>
+
+        <p>By adding a query parameter <code class="highlighter-rouge">launch_year</code> to the API call you can fetch
+          only launches for a specific year.
+          To fetch only past launches for 2019 you sould make a small change to function <code
+              class="highlighter-rouge">getPastLaunches</code>.</p>
+
+        <p>You will need to :</p>
+
+        <ul>
+          <li>construct a HttpParams object that holds the parameters that you want to pass</li>
+          <li>add a parameter ‘launch_year’</li>
+          <li>call http get with the url and params</li>
+        </ul>
+
+        <div class="solution-start"></div>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>  <span class="kr">public</span> <span class="nx">getPastLaunches</span><span
+            class="p">()</span><span class="err">:</span> <span class="nx">Observable</span><span
+            class="o">&lt;</span><span class="nx">Launch</span><span class="p">[]</span><span
+            class="o">&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">params</span> <span class="o">=</span> <span
+              class="k">new</span> <span class="nx">HttpParams</span><span class="p">().</span><span
+              class="nx">set</span><span class="p">(</span><span class="s1">'launch_year'</span><span class="p">,</span> <span
+              class="s1">'2019'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span
+              class="p">.</span><span class="nx">get</span><span class="o">&lt;</span><span
+              class="nx">Launch</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">(</span><span
+              class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="k">this</span><span
+              class="p">.</span><span class="nx">baseUrl</span><span class="p">}</span><span class="sr">/past`, {params: params}</span><span
+              class="se">)</span><span class="err">;
+</span>  <span class="p">}</span>
+</code></pre>
+        </div>
+
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <blockquote>
+          <p><strong>Cross-platform Differences</strong></p>
+
+          <p>In the cross-platform work, rendering native UI components (like NativeScript does) is a tough problem
+            because of
+            subtleties in the underlying mobile platforms. As a mobile developer, you’ll run into these from time to
+            time.
+            NativeScript does well at abstracting these differences from you, but dealing with Angular’s status bar /
+            action bar is
+            one of those times you need to do a little more legwork.</p>
+        </blockquote>
+
+        <p>The appearance of the status bar / action bar at top makes the app less appealing. So let’s remove it.</p>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Fixing the Home page Action Bar on Android
+        </h4>
+
+        <p>Let’s start by investigating the problem on Android. As you might have noticed, tho <code
+            class="highlighter-rouge">Home view</code> has no Action Bar in
+          it’s template (see <code class="highlighter-rouge">home.component.html</code>). This works on iOS but Android
+          will still display an ugly text at the top.</p>
+
+        <h4 id="removing-the-action-bar-on-android">Removing the Action Bar on Android</h4>
+
+        <p>Start by opening the <code class="highlighter-rouge">home.component.ts</code> file.</p>
+
+        <p>Import the <code class="highlighter-rouge">Page</code> class at top:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="p">{</span> <span class="nx">Page</span> <span class="p">}</span> <span class="nx">from</span> <span
+            class="s2">"ui/page"</span><span class="p">;</span>
+</code></pre>
+        </div>
+
+        <p>Next, update the <code class="highlighter-rouge">constructor</code> and inject the page.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">constructor</span><span
+            class="p">(</span>
+    <span class="kr">private</span> <span class="nx">routerExtensions</span><span class="err">:</span> <span class="nx">RouterExtensions</span><span
+              class="p">,</span>
+    <span class="kr">private</span> <span class="nx">page</span><span class="err">:</span> <span
+              class="nx">Page</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+        <p>Now we have a page instance available we can change <code class="highlighter-rouge">ngOnInit()</code> to hide
+          the actionbar.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">ngOnInit</span><span
+            class="p">()</span><span class="err">:</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">page</span><span class="p">.</span><span
+              class="nx">actionBarHidden</span> <span class="o">=</span> <span class="kc">true</span><span
+              class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+
+
+      </div>
+      <div class="chapter">
+
+        <h2 id="lesson-4---plugins">Lesson 4 - Plugins</h2>
+
+        <p>In this Lesson you are going to learn how to use a few out of a generous collection of NativeScript
+          plugins.</p>
+
+        <p>Most of the plugins you can install either by calling <code class="highlighter-rouge">npm install</code> or
+          for those that contain some native iOS and/or
+          Android elements <code class="highlighter-rouge">tns plugin add</code>.</p>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Setup
+        </h4>
+
+        <p>In this exercise we will be working on <code
+            class="highlighter-rouge">plugins/wizard-profile.component</code>.</p>
+
+        <p>If you are using Playground please head to <a
+            href="https://play.nativescript.org/?template=play-ng&amp;id=DPPcQ0">https://play.nativescript.org/?template=play-ng&amp;id=DPPcQ0</a>.
+          In Playground you can only do the Camera and Social Sharing excersises. These plugins are already ‘loaded’ in
+          Playground.<br/>
+          And again … please <code class="highlighter-rouge">Fork</code> the Playground app to create your ‘own’
+          Playground environment.</p>
+
+        <p>Let’s start with changing the default route in <code class="highlighter-rouge">app-routing.module.ts</code>
+          to <code class="highlighter-rouge">'/plugins'</code>:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span> <span
+            class="nl">path</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span> <span
+            class="nx">redirectTo</span><span class="err">:</span> <span class="s1">'/plugins'</span><span
+            class="p">,</span> <span class="nx">pathMatch</span><span class="err">:</span> <span
+            class="s1">'full'</span> <span class="p">},</span>
+</code></pre>
+        </div>
+
+        <div class="exercise-end"></div>
+
+        <h3 id="exercise-camera-plugin">Exercise: Camera Plugin</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Camera Plugin
+        </h4>
+
+        <p>You can find the <a target="_blank" href="https://docs.nativescript.org/angular/code-samples/camera">camera plugin here</a>.
+        </p>
+
+        <p>To install it run:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>npm i nativescript-camera --save
+</code></pre>
+        </div>
+
+        <blockquote>
+          <p>Remember, every time you make a change to native bits of your app (including adding/removing plugins) you
+            need to
+            rebuild and redeploy your app with <code class="highlighter-rouge">tns run</code>.</p>
+        </blockquote>
+
+        <p>To install npm packages in the NativeScript Playground click the + sign in the Explorer bar (add new item)
+          and select <code class="highlighter-rouge">Add NPM package</code></p>
+        <p><img src="images/chapter4/playground-npm-install.png" class="img-medium"/></p>
+
+        <p>Next, open <code class="highlighter-rouge">wizard-profile.component.ts</code> and import <code
+            class="highlighter-rouge">nativescript-camera</code> using the line of code below.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="o">*</span> <span class="nx">as</span> <span class="nx">camera</span> <span
+            class="nx">from</span> <span class="s1">'nativescript-camera'</span><span class="p">;</span>
+</code></pre>
+        </div>
+
+        <p>After that, update the <code class="highlighter-rouge">WizardProfileComponent</code>’s <code
+            class="highlighter-rouge">takeProfilePicture</code> function to take a picture and call
+          <code class="highlighter-rouge">this.updateProfilePicture</code>, passing the <code class="highlighter-rouge">ImageAsset</code>
+          you got from the camera plugin’s callback function.
+          Try to figure it out based on the info in the documentation.
+          Note that you might need to call <code class="highlighter-rouge">camera.requestPermissions();</code> from
+          <code class="highlighter-rouge">ngOnInit</code>.</p>
+
+        <div class="solution-start"></div>
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">ngOnInit</span><span
+            class="p">()</span> <span class="p">{</span>
+  <span class="c1">// get camera permissions when loading for the first time</span>
+  <span class="nx">camera</span><span class="p">.</span><span class="nx">requestPermissions</span><span
+              class="p">();</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">reloadPowers</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">takeProfilePicture</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">options</span><span class="err">:</span> <span class="nx">camera</span><span
+              class="p">.</span><span class="nx">CameraOptions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="na">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="na">keepAspectRatio</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">saveToGallery</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">};</span>
+
+  <span class="nx">camera</span><span class="p">.</span><span class="nx">takePicture</span><span class="p">(</span><span
+              class="nx">options</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">imageAsset</span><span
+              class="err">:</span> <span class="nx">ImageAsset</span><span class="p">)</span> <span
+              class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">updateProfilePicture</span><span
+              class="p">(</span><span class="nx">imageAsset</span><span class="p">);</span>
+  <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span
+              class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span
+              class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+        </div>
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+        <h3 id="exercise-social-share-plugin">Exercise: Social Share Plugin</h3>
+
+        <h4 class="exercise-start">
+          <b>Exercise</b>: Social Share Plugin
+        </h4>
+
+        <p>You can find the <a target="_blank" href="https://www.npmjs.com/package/nativescript-social-share">nativescript-social-share
+          here</a></p>
+
+        <p>To install it run:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>tns plugin add nativescript-social-share
+</code></pre>
+        </div>
+
+        <p>Next, open <code class="highlighter-rouge">wizard-profile.component.ts</code> and import <code
+            class="highlighter-rouge">nativescript-social-share</code> using the code below:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span
+            class="o">*</span> <span class="nx">as</span> <span class="nx">SocialShare</span> <span
+            class="nx">from</span> <span class="s1">'nativescript-social-share'</span><span class="p">;</span>
+</code></pre>
+        </div>
+
+        <p>After that, update the <code class="highlighter-rouge">share</code> function in <code
+            class="highlighter-rouge">WizardProfileComponent</code> to share the existing <code
+            class="highlighter-rouge">messageBody</code> variable.</p>
+
+        <div class="solution-start"></div>
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">SocialShare</span><span
+            class="p">.</span><span class="nx">shareText</span><span class="p">(</span><span
+            class="nx">messageBody</span><span class="p">);</span>
+</code></pre>
+        </div>
+        <div class="solution-end"></div>
+
+        <p>Finally, update the <code class="highlighter-rouge">WizardProfileComponent</code>’s <code
+            class="highlighter-rouge">sharePicture</code> function to share the component’s <code
+            class="highlighter-rouge">profilePicture</code> property.</p>
+
+        <div class="solution-start"></div>
+        <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">SocialShare</span><span
+            class="p">.</span><span class="nx">shareImage</span><span class="p">(</span><span class="k">this</span><span
+            class="p">.</span><span class="nx">profilePicture</span><span class="p">);</span>
+</code></pre>
+        </div>
+        <div class="solution-end"></div>
+
+        <div class="exercise-end"></div>
+
+
+
+      </div>
+      <div class="chapter">
+
+        <h2 id="where-to-go-from-here">Where to go from here?</h2>
+
+        <p>Congratulations! You’ve completed the NativeScript workshop 🎉</p>
+
+        <p>Here some links to interesting web resources:</p>
+
+        <ul>
+          <li><a target="_blank" href="https://nativescript.org">Official NativeScript website</a></li>
+          <li><a target="_blank" href="https://market.nativescript.org">NativeScript Marketplace (plugins, templates and samples)</a>
+          </li>
+          <li><a target="_blank" href="https://www.nativescript.org/resources">Official Resources List</a></li>
+          <li><a target="_blank" href="https://github.com/NativeScript/NativeScript">GitHub Repository</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="scripts/prism.js"></script>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/app.js"></script>
+
+</body>
+</html>
